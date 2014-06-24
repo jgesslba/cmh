@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<directory>
-	<group ID="01000000000000000000000000000000" name="Admin">
-	</group>
-</directory>
-
+<?xml version="1.0" encoding="utf-8"?><directory><group name="Admin" ID="01000000000000000000000000000000" fullName="Admin"/><group name="Gamehost" ID="5E7D48721682445DA9665C9E626C82E9" fullName="Gamehost group"/><group name="Gameadmin" ID="06339A93A16E4DDBAF04C6BD20322ED8" fullName="Gameadmin group"/><group name="Game_Read" ID="C93627FF578E439E90BED8E2E25E2053" fullName="Game_Read group"/></directory>
