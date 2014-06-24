@@ -1,0 +1,1 @@
+model.Country.iso.events.onSet = function() {	// Add default avatar	this.flag = loadImage(ds.getModelFolder().path + 'WebFolder/images/countries/' + this.iso + '.png');};
