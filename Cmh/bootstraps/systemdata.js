@@ -1,3 +1,16 @@
+// ##### RESET ALL AUTOSEQUENCES FOR ALL DATACLASSES IN THE MODEL #####
+
+// ----- Cycle through all classes in ds
+
+for (var e in ds.dataClasses) {
+	var theClass = ds.dataClasses[e]; // Get a reference to a class
+	var maxID = theClass.all().max('ID'); // Find the largest value
+	theClass.setAutoSequenceNumber(maxID + 1); // Reset the auto sequence
+}
+
+
+
+
 var countries = ds.Country.all();
 
 if (countries.length === 0) {
