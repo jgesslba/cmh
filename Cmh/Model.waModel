@@ -1,679 +1,1 @@
-﻿{
-	"toJSON": true,
-	"extraProperties": {
-		"version": "2",
-		"classes": {
-			"User": {
-				"panelColor": "rgb(255, 78, 89)",
-				"panel": {
-					"isOpen": "true",
-					"pathVisible": true,
-					"position": {
-						"X": 43,
-						"Y": 23
-					}
-				}
-			},
-			"Sessioninfo": {
-				"panelColor": "#C4BD97",
-				"panel": {
-					"isOpen": "true",
-					"position": {
-						"X": 182,
-						"Y": 323
-					}
-				}
-			},
-			"Game": {
-				"panelColor": "rgb(79, 169, 151)",
-				"panel": {
-					"isOpen": "false",
-					"pathVisible": true,
-					"position": {
-						"X": 674,
-						"Y": 25
-					}
-				}
-			},
-			"Gamer": {
-				"panelColor": "rgb(79, 169, 151)",
-				"panel": {
-					"isOpen": "false",
-					"pathVisible": true,
-					"position": {
-						"X": 788,
-						"Y": 40
-					}
-				}
-			},
-			"Country": {
-				"panelColor": "rgb(84, 141, 212)",
-				"panel": {
-					"isOpen": "false",
-					"pathVisible": false,
-					"position": {
-						"X": 369,
-						"Y": 25
-					}
-				}
-			},
-			"PublicFunctions": {
-				"panelColor": "#76923C",
-				"panel": {
-					"isOpen": "true",
-					"pathVisible": true,
-					"position": {
-						"X": 406,
-						"Y": 26
-					}
-				}
-			},
-			"Menuitem": {
-				"panelColor": "#D7E3BC",
-				"panel": {
-					"isOpen": "true",
-					"position": {
-						"X": 376,
-						"Y": 30
-					},
-					"pathVisible": true
-				}
-			}
-		},
-		"model": {
-			"scriptMode": "manual",
-			"workspaceLeft": 0,
-			"workspaceTop": 0,
-			"lastScriptLocation": {
-				"User": {
-					"computed": "User/User-events.js",
-					"method": "User/User-methods.js",
-					"events": "User/User-events.js"
-				},
-				"Game": {
-					"events": "Game/Game-events.js",
-					"computed": "Game/Game-events.js"
-				},
-				"Gamer": {
-					"events": "Gamer/Gamer-events.js"
-				},
-				"Country": {
-					"events": "Country/Country-events.js",
-					"method": "Country/Country-methods.js"
-				}
-			}
-		}
-	},
-	"dataClasses": [
-		{
-			"name": "Country",
-			"className": "Country",
-			"collectionName": "CountryCollection",
-			"scope": "publicOnServer",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
-				},
-				{
-					"name": "name",
-					"kind": "storage",
-					"scope": "public",
-					"not_null": true,
-					"type": "string"
-				},
-				{
-					"name": "iso",
-					"kind": "storage",
-					"scope": "public",
-					"not_null": true,
-					"type": "string",
-					"events": [
-						{
-							"kind": "onSet",
-							"from": "model.Country.iso.events.onSet",
-							"userDefined": true
-						}
-					]
-				},
-				{
-					"name": "flag",
-					"kind": "storage",
-					"scope": "public",
-					"type": "image"
-				},
-				{
-					"name": "userCollection",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "UserCollection",
-					"reversePath": true,
-					"path": "country"
-				}
-			]
-		},
-		{
-			"name": "Game",
-			"className": "Game",
-			"collectionName": "GameCollection",
-			"scope": "public",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
-				},
-				{
-					"name": "name",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "period",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number",
-					"minValue": "0",
-					"maxValue": "13",
-					"defaultValue": "0",
-					"events": [
-						{
-							"kind": "onSet",
-							"from": "model.Game.period.events.onSet",
-							"userDefined": true
-						}
-					]
-				},
-				{
-					"name": "status",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "gamer",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "GamerCollection",
-					"reversePath": true,
-					"path": "game"
-				},
-				{
-					"name": "createdAt",
-					"kind": "storage",
-					"scope": "public",
-					"type": "date",
-					"simpleDate": false,
-					"defaultFormat": [
-						{
-							"format": "dd/mm/yy",
-							"locale": "at",
-							"presentation": "text"
-						}
-					]
-				},
-				{
-					"name": "createdBy",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "User",
-					"path": "User"
-				},
-				{
-					"name": "createdByFullName",
-					"kind": "alias",
-					"scope": "public",
-					"type": "string",
-					"path": "createdBy.fullName"
-				},
-				{
-					"name": "createdByPhoto",
-					"kind": "alias",
-					"scope": "public",
-					"type": "image",
-					"path": "createdBy.photo"
-				},
-				{
-					"name": "modifiedAt",
-					"kind": "storage",
-					"scope": "public",
-					"type": "date",
-					"simpleDate": false,
-					"defaultFormat": [
-						{
-							"format": "dd/mm/yy",
-							"presentation": "text"
-						}
-					]
-				},
-				{
-					"name": "modifiedBy",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "User",
-					"path": "User"
-				},
-				{
-					"name": "modifiedByFullName",
-					"kind": "alias",
-					"scope": "public",
-					"type": "string",
-					"path": "modifiedBy.fullName"
-				},
-				{
-					"name": "modifiedByPhoto",
-					"kind": "alias",
-					"scope": "public",
-					"type": "image",
-					"path": "modifiedBy.photo"
-				},
-				{
-					"name": "viewedAt",
-					"kind": "storage",
-					"scope": "public",
-					"type": "date",
-					"simpleDate": false
-				},
-				{
-					"name": "viewedBy",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "User",
-					"path": "User"
-				},
-				{
-					"name": "viewedByFullName",
-					"kind": "alias",
-					"scope": "public",
-					"type": "string",
-					"path": "viewedBy.fullName"
-				},
-				{
-					"name": "viewedByPhoto",
-					"kind": "alias",
-					"scope": "public",
-					"type": "image",
-					"path": "viewedBy.photo"
-				},
-				{
-					"name": "mainGameHost",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "User",
-					"path": "User"
-				},
-				{
-					"name": "mainGameHostFullName",
-					"kind": "alias",
-					"scope": "public",
-					"type": "string",
-					"path": "mainGameHost.fullName"
-				},
-				{
-					"name": "mainGameHostPhoto",
-					"kind": "alias",
-					"scope": "public",
-					"type": "image",
-					"path": "mainGameHost.photo"
-				},
-				{
-					"name": "placeNextMeeting",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "beginNextMeeting",
-					"kind": "storage",
-					"scope": "public",
-					"type": "date",
-					"simpleDate": false
-				},
-				{
-					"name": "endNextMeeting",
-					"kind": "storage",
-					"scope": "public",
-					"type": "date",
-					"simpleDate": false
-				},
-				{
-					"name": "deadlineNextDecisions",
-					"kind": "storage",
-					"scope": "public",
-					"type": "date",
-					"simpleDate": false
-				},
-				{
-					"name": "gameInfo",
-					"kind": "calculated",
-					"scope": "public",
-					"type": "string",
-					"scriptKind": "javascript",
-					"onGet": [
-						{
-							"from": "model.Game.gameInfo.onGet",
-							"userDefined": true
-						}
-					]
-				}
-			],
-			"events": [
-				{
-					"kind": "onSave",
-					"from": "model.Game.events.onSave",
-					"userDefined": true
-				},
-				{
-					"kind": "onRestrictingQuery",
-					"from": "model.Game.events.onRestrictingQuery",
-					"userDefined": true
-				}
-			]
-		},
-		{
-			"name": "Gamer",
-			"className": "Gamer",
-			"collectionName": "GamerCollection",
-			"scope": "publicOnServer",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
-				},
-				{
-					"name": "game",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "Game",
-					"path": "Game"
-				},
-				{
-					"name": "user",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "User",
-					"path": "User"
-				},
-				{
-					"name": "managementPermission",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number",
-					"minValue": "0",
-					"maxValue": "2",
-					"defaultValue": "0"
-				},
-				{
-					"name": "nurseryPermission",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number"
-				},
-				{
-					"name": "radiologyPermission",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number"
-				},
-				{
-					"name": "surgeryPermission",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number"
-				},
-				{
-					"name": "gamehostPermission",
-					"kind": "storage",
-					"scope": "public",
-					"type": "bool"
-				},
-				{
-					"name": "gamerFullName",
-					"kind": "alias",
-					"scope": "public",
-					"type": "string",
-					"path": "user.fullName"
-				},
-				{
-					"name": "gamerPhoto",
-					"kind": "alias",
-					"scope": "public",
-					"type": "image",
-					"path": "user.photo"
-				}
-			],
-			"events": [
-				{
-					"kind": "onValidate",
-					"from": "model.Gamer.events.onValidate",
-					"userDefined": true
-				}
-			]
-		},
-		{
-			"name": "User",
-			"className": "User",
-			"collectionName": "UserCollection",
-			"scope": "publicOnServer",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"autogenerate": true,
-					"type": "uuid",
-					"indexKind": "btree",
-					"primKey": true
-				},
-				{
-					"name": "firstName",
-					"kind": "storage",
-					"scope": "public",
-					"not_null": true,
-					"type": "string"
-				},
-				{
-					"name": "lastName",
-					"kind": "storage",
-					"scope": "public",
-					"not_null": true,
-					"type": "string"
-				},
-				{
-					"name": "fullName",
-					"kind": "calculated",
-					"scope": "public",
-					"type": "string",
-					"scriptKind": "javascript",
-					"onGet": [
-						{
-							"from": "model.User.fullName.onGet",
-							"userDefined": true
-						}
-					]
-				},
-				{
-					"name": "gender",
-					"kind": "storage",
-					"scope": "public",
-					"limiting_length": 1,
-					"not_null": true,
-					"type": "string",
-					"fixedLength": 1,
-					"minLength": 1,
-					"maxLength": 1
-				},
-				{
-					"name": "photo",
-					"kind": "storage",
-					"scope": "public",
-					"type": "image",
-					"events": [
-						{
-							"kind": "onRemove",
-							"from": "model.User.photo.events.onRemove",
-							"userDefined": true
-						}
-					]
-				},
-				{
-					"name": "userName",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"not_null": true,
-					"type": "string",
-					"identifying": true
-				},
-				{
-					"name": "password",
-					"kind": "storage",
-					"scope": "public",
-					"not_null": true,
-					"type": "string"
-				},
-				{
-					"name": "email",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"not_null": true,
-					"type": "string",
-					"identifying": true
-				},
-				{
-					"name": "phone",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "country",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "Country",
-					"path": "Country"
-				},
-				{
-					"name": "role",
-					"kind": "storage",
-					"scope": "public",
-					"not_null": true,
-					"type": "string"
-				},
-				{
-					"name": "avatarPhoto",
-					"kind": "storage",
-					"scope": "public",
-					"type": "bool"
-				},
-				{
-					"name": "gamePartizipations",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "GamerCollection",
-					"reversePath": true,
-					"path": "user"
-				},
-				{
-					"name": "gameOwnerships",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "GameCollection",
-					"reversePath": true,
-					"path": "createdBy"
-				},
-				{
-					"name": "gameModifications",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "GameCollection",
-					"reversePath": true,
-					"path": "modifiedBy"
-				},
-				{
-					"name": "gameViewings",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "GameCollection",
-					"reversePath": true,
-					"path": "viewedBy"
-				},
-				{
-					"name": "mainGameHosts",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "GameCollection",
-					"reversePath": true,
-					"path": "mainGameHost"
-				}
-			],
-			"events": [
-				{
-					"kind": "onSave",
-					"from": "model.User.events.onSave",
-					"userDefined": true
-				}
-			]
-		},
-		{
-			"collectionName": "MenuitemCollection",
-			"className": "Menuitem",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"type": "string",
-					"primKey": "true",
-					"autosequence": true,
-					"unique": true
-				},
-				{
-					"name": "title",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "class",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "componentPath",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "imagePath",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				}
-			]
-		}
-	],
-	"type": []
-}
+﻿{	"toJSON": true,	"extraProperties": {		"version": "2",		"classes": {			"User": {				"panelColor": "rgb(255, 78, 89)",				"panel": {					"isOpen": "true",					"pathVisible": true,					"position": {						"X": 43,						"Y": 23					}				}			},			"Sessioninfo": {				"panelColor": "#C4BD97",				"panel": {					"isOpen": "true",					"position": {						"X": 182,						"Y": 323					}				}			},			"Game": {				"panelColor": "rgb(79, 169, 151)",				"panel": {					"isOpen": "false",					"pathVisible": true,					"position": {						"X": 677,						"Y": 30					}				}			},			"Gamer": {				"panelColor": "rgb(79, 169, 151)",				"panel": {					"isOpen": "false",					"pathVisible": true,					"position": {						"X": 720,						"Y": 45					}				}			},			"Country": {				"panelColor": "rgb(84, 141, 212)",				"panel": {					"isOpen": "false",					"pathVisible": false,					"position": {						"X": 369,						"Y": 25					}				}			},			"PublicFunctions": {				"panelColor": "#76923C",				"panel": {					"isOpen": "true",					"pathVisible": true,					"position": {						"X": 406,						"Y": 26					}				}			},			"Menuitem": {				"panelColor": "#D7E3BC",				"panel": {					"isOpen": "true",					"pathVisible": true,					"position": {						"X": 400,						"Y": 32					}				}			}		},		"model": {			"scriptMode": "manual",			"workspaceLeft": 0,			"workspaceTop": 0,			"lastScriptLocation": {				"User": {					"computed": "User/User-events.js",					"method": "User/User-methods.js",					"events": "User/User-events.js"				},				"Game": {					"events": "Game/Game-events.js",					"computed": "Game/Game-events.js"				},				"Gamer": {					"events": "Gamer/Gamer-events.js"				},				"Country": {					"events": "Country/Country-events.js",					"method": "Country/Country-methods.js"				}			}		}	},	"dataClasses": [		{			"name": "Country",			"className": "Country",			"collectionName": "CountryCollection",			"scope": "publicOnServer",			"attributes": [				{					"name": "ID",					"kind": "storage",					"scope": "public",					"unique": true,					"autosequence": true,					"type": "long",					"indexKind": "btree",					"primKey": true				},				{					"name": "name",					"kind": "storage",					"scope": "public",					"not_null": true,					"type": "string"				},				{					"name": "iso",					"kind": "storage",					"scope": "public",					"not_null": true,					"type": "string",					"events": [						{							"kind": "onSet",							"from": "model.Country.iso.events.onSet",							"userDefined": true						}					]				},				{					"name": "flag",					"kind": "storage",					"scope": "public",					"type": "image"				},				{					"name": "userCollection",					"kind": "relatedEntities",					"scope": "public",					"type": "UserCollection",					"reversePath": true,					"path": "country"				}			]		},		{			"name": "Game",			"className": "Game",			"collectionName": "GameCollection",			"scope": "public",			"attributes": [				{					"name": "ID",					"kind": "storage",					"scope": "public",					"unique": true,					"autosequence": true,					"type": "long",					"indexKind": "btree",					"primKey": true				},				{					"name": "name",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "period",					"kind": "storage",					"scope": "public",					"type": "number",					"minValue": "0",					"maxValue": "13",					"defaultValue": "0",					"events": [						{							"kind": "onSet",							"from": "model.Game.period.events.onSet",							"userDefined": true						}					]				},				{					"name": "status",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "gamer",					"kind": "relatedEntities",					"scope": "public",					"type": "GamerCollection",					"reversePath": true,					"path": "game"				},				{					"name": "createdAt",					"kind": "storage",					"scope": "public",					"type": "date",					"simpleDate": false,					"defaultFormat": [						{							"format": "dd/mm/yy",							"locale": "at",							"presentation": "text"						}					]				},				{					"name": "createdBy",					"kind": "relatedEntity",					"scope": "public",					"type": "User",					"path": "User"				},				{					"name": "createdByFullName",					"kind": "alias",					"scope": "public",					"type": "string",					"path": "createdBy.fullName"				},				{					"name": "createdByPhoto",					"kind": "alias",					"scope": "public",					"type": "image",					"path": "createdBy.photo"				},				{					"name": "modifiedAt",					"kind": "storage",					"scope": "public",					"type": "date",					"simpleDate": false,					"defaultFormat": [						{							"format": "dd/mm/yy",							"presentation": "text"						}					]				},				{					"name": "modifiedBy",					"kind": "relatedEntity",					"scope": "public",					"type": "User",					"path": "User"				},				{					"name": "modifiedByFullName",					"kind": "alias",					"scope": "public",					"type": "string",					"path": "modifiedBy.fullName"				},				{					"name": "modifiedByPhoto",					"kind": "alias",					"scope": "public",					"type": "image",					"path": "modifiedBy.photo"				},				{					"name": "viewedAt",					"kind": "storage",					"scope": "public",					"type": "date",					"simpleDate": false				},				{					"name": "viewedBy",					"kind": "relatedEntity",					"scope": "public",					"type": "User",					"path": "User"				},				{					"name": "viewedByFullName",					"kind": "alias",					"scope": "public",					"type": "string",					"path": "viewedBy.fullName"				},				{					"name": "viewedByPhoto",					"kind": "alias",					"scope": "public",					"type": "image",					"path": "viewedBy.photo"				},				{					"name": "mainGameHost",					"kind": "relatedEntity",					"scope": "public",					"type": "User",					"path": "User"				},				{					"name": "mainGameHostFullName",					"kind": "alias",					"scope": "public",					"type": "string",					"path": "mainGameHost.fullName"				},				{					"name": "mainGameHostPhoto",					"kind": "alias",					"scope": "public",					"type": "image",					"path": "mainGameHost.photo"				},				{					"name": "placeNextMeeting",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "beginNextMeeting",					"kind": "storage",					"scope": "public",					"type": "date",					"simpleDate": false				},				{					"name": "endNextMeeting",					"kind": "storage",					"scope": "public",					"type": "date",					"simpleDate": false				},				{					"name": "deadlineNextDecisions",					"kind": "storage",					"scope": "public",					"type": "date",					"simpleDate": false				},				{					"name": "gameInfo",					"kind": "calculated",					"scope": "public",					"type": "string",					"scriptKind": "javascript",					"onGet": [						{							"from": "model.Game.gameInfo.onGet",							"userDefined": true						}					]				}			],			"events": [				{					"kind": "onSave",					"from": "model.Game.events.onSave",					"userDefined": true				},				{					"kind": "onRestrictingQuery",					"from": "model.Game.events.onRestrictingQuery",					"userDefined": true				}			]		},		{			"name": "Gamer",			"className": "Gamer",			"collectionName": "GamerCollection",			"scope": "publicOnServer",			"attributes": [				{					"name": "ID",					"kind": "storage",					"scope": "public",					"unique": true,					"autosequence": true,					"type": "long",					"indexKind": "btree",					"primKey": true				},				{					"name": "game",					"kind": "relatedEntity",					"scope": "public",					"type": "Game",					"path": "Game"				},				{					"name": "user",					"kind": "relatedEntity",					"scope": "public",					"type": "User",					"path": "User"				},				{					"name": "managementPermission",					"kind": "storage",					"scope": "public",					"type": "number",					"minValue": "0",					"maxValue": "2",					"defaultValue": "0"				},				{					"name": "nurseryPermission",					"kind": "storage",					"scope": "public",					"type": "number"				},				{					"name": "radiologyPermission",					"kind": "storage",					"scope": "public",					"type": "number"				},				{					"name": "surgeryPermission",					"kind": "storage",					"scope": "public",					"type": "number"				},				{					"name": "gamehostPermission",					"kind": "storage",					"scope": "public",					"type": "bool"				},				{					"name": "gamerFullName",					"kind": "alias",					"scope": "public",					"type": "string",					"path": "user.fullName"				},				{					"name": "gamerPhoto",					"kind": "alias",					"scope": "public",					"type": "image",					"path": "user.photo"				}			],			"events": [				{					"kind": "onValidate",					"from": "model.Gamer.events.onValidate",					"userDefined": true				}			]		},		{			"name": "Menuitem",			"className": "Menuitem",			"collectionName": "MenuitemCollection",			"scope": "public",			"attributes": [				{					"name": "ID",					"kind": "storage",					"scope": "public",					"unique": true,					"autosequence": true,					"type": "string",					"primKey": true				},				{					"name": "title",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "class",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "componentPath",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "image",					"scope": "public",					"type": "image",					"kind": "storage"				}			]		},		{			"name": "User",			"className": "User",			"collectionName": "UserCollection",			"scope": "publicOnServer",			"attributes": [				{					"name": "ID",					"kind": "storage",					"scope": "public",					"unique": true,					"autosequence": true,					"autogenerate": true,					"type": "uuid",					"indexKind": "btree",					"primKey": true				},				{					"name": "firstName",					"kind": "storage",					"scope": "public",					"not_null": true,					"type": "string"				},				{					"name": "lastName",					"kind": "storage",					"scope": "public",					"not_null": true,					"type": "string"				},				{					"name": "fullName",					"kind": "calculated",					"scope": "public",					"type": "string",					"scriptKind": "javascript",					"onGet": [						{							"from": "model.User.fullName.onGet",							"userDefined": true						}					]				},				{					"name": "gender",					"kind": "storage",					"scope": "public",					"limiting_length": 1,					"not_null": true,					"type": "string",					"fixedLength": 1,					"minLength": 1,					"maxLength": 1				},				{					"name": "photo",					"kind": "storage",					"scope": "public",					"type": "image",					"events": [						{							"kind": "onRemove",							"from": "model.User.photo.events.onRemove",							"userDefined": true						}					]				},				{					"name": "userName",					"kind": "storage",					"scope": "public",					"unique": true,					"not_null": true,					"type": "string",					"identifying": true				},				{					"name": "password",					"kind": "storage",					"scope": "public",					"not_null": true,					"type": "string"				},				{					"name": "email",					"kind": "storage",					"scope": "public",					"unique": true,					"not_null": true,					"type": "string",					"identifying": true				},				{					"name": "phone",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "country",					"kind": "relatedEntity",					"scope": "public",					"type": "Country",					"path": "Country"				},				{					"name": "role",					"kind": "storage",					"scope": "public",					"not_null": true,					"type": "string"				},				{					"name": "avatarPhoto",					"kind": "storage",					"scope": "public",					"type": "bool"				},				{					"name": "gamePartizipations",					"kind": "relatedEntities",					"scope": "public",					"type": "GamerCollection",					"reversePath": true,					"path": "user"				},				{					"name": "gameOwnerships",					"kind": "relatedEntities",					"scope": "public",					"type": "GameCollection",					"reversePath": true,					"path": "createdBy"				},				{					"name": "gameModifications",					"kind": "relatedEntities",					"scope": "public",					"type": "GameCollection",					"reversePath": true,					"path": "modifiedBy"				},				{					"name": "gameViewings",					"kind": "relatedEntities",					"scope": "public",					"type": "GameCollection",					"reversePath": true,					"path": "viewedBy"				},				{					"name": "mainGameHosts",					"kind": "relatedEntities",					"scope": "public",					"type": "GameCollection",					"reversePath": true,					"path": "mainGameHost"				}			],			"events": [				{					"kind": "onSave",					"from": "model.User.events.onSave",					"userDefined": true				}			]		}	],	"type": []}
