@@ -28,6 +28,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	
 	// Build the menubar
 	function buildTopNavBar () {
+		
 		topNavData = [ // Array with menu item objects
 			{title: objTranslation.menuGamecenter, componentpath: "/components/gamer/gamerGamecenter.waComponent", topNavItemImagePath: "/images/Medical_Office.png", topNavItemId: "navGamecenter", topNavItemClass: "topNavItemLi topNavItemSelected"},
 			{title: objTranslation.menuManagement, componentpath: "/components/gamer/management/gamerManagementHome.waComponent", topNavItemImagePath: "/images/Medical_Invoice.png", topNavItemId: "navManagement", topNavItemClass: "topNavItemLi"},
