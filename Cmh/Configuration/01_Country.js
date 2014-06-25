@@ -3,7 +3,7 @@
 ds.Country.remove();
 
 
- ##### CREATE DEFAULT COUNTRIES #####
+// ##### CREATE DEFAULT COUNTRIES #####
 
 var newCountry = new ds.Country();
 newCountry.name = "Austria";
