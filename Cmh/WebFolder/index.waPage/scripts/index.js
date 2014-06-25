@@ -12,13 +12,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		objTranslation.richTextGameDescription = translate("index", "richTextGameDescription");
 		objTranslation.richTextHeadlineGameConcept = translate("index", "richTextHeadlineGameConcept");
 		objTranslation.richTextGameConcept = translate("index", "richTextGameConcept");
-		
-		// Sync variables
-		varErrorMessageRequired = translate("index", "varErrorMessageRequired");
-		varErrorMessageLoginFailed = translate("index", "varErrorMessageLoginFailed");
-		
+		objTranslation.errorMessageLoginFailed = translate("index", "errorMessageLoginFailed");
+		objTranslation.errorMessageRequired = translate("index", "errorMessageRequired");
+		objTranslation.buttonLogin = translate("index", "buttonLogin");
+				
 		// Sync buttons
-		$$("buttonLogin").setValue(translate("index", "buttonLogin"));
+		$$("buttonLogin").setValue(objTranslation.buttonLogin);
 		
 		// Sync datasources
 		WAF.sources.objTranslation.sync();
@@ -70,7 +69,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			WAF.sources.varCurrentUser.sync();
 		
 			// Set the error message in the username input placeholder
-			$("#textFieldUserName").attr("placeholder", varErrorMessageLoginFailed);
+			$("#textFieldUserName").attr("placeholder", objTranslation.errorMessageLoginFailed);
 			
 			// Add errorDiv class to inform the user something goes wrong
 			$$("textFieldUserName").addClass("errorTextField");
@@ -181,7 +180,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		// Error handling
 		if (this.getValue() == "") {
 			this.addClass("errorTextField"); // Add css class for errorDiv
-			$("#textFieldPassword").attr("placeholder", varErrorMessageRequired);
+			$("#textFieldPassword").attr("placeholder", objTranslation.errorMessageRequired);
 		}
 	};// @lock
 
@@ -214,7 +213,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		// Error handling
 		if (this.getValue() == "") {
 			this.addClass("errorTextField"); // Add css class for errorDiv
-			$("#textFieldUserName").attr("placeholder", varErrorMessageRequired);
+			$("#textFieldUserName").attr("placeholder", objTranslation.errorMessageRequired);
 		}
 	};// @lock
 
