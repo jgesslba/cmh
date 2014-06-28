@@ -62,7 +62,7 @@ var translations = {
 		"de" : {
 			"richTextInformation" : "Wählen Sie ein Spiel und klicken Sie anschließend auf \"Gewähltes Spiel betreten\".",
 			"richTextLogout" : "Abmelden",
-			"menuGamecenter" : "Spielzentrum",
+			"menuGamer" : "Spieler",
 			"menuManagement" : "Management",
 			"menuNursing" : "Pflege",
 			"menuRadiology" : "Röntgen",
@@ -74,7 +74,7 @@ var translations = {
 		"en" : {
 			"richTextInformation" : "Select a game and click on \"Enter selected game\".",
 			"richTextLogout" : "Logout",
-			"menuGamecenter" : "Gamecenter",
+			"menuGamer" : "Gamer",
 			"menuManagement" : "Management",
 			"menuNursing" : "Care",
 			"menuRadiology" : "X-Ray",
@@ -94,11 +94,11 @@ var translations = {
 			"gamerGamecenter" : {
 		
 				"de" : {
-					"richTextWelcome" : "Willkommen im Spielzentrum"
+					"richTextWelcome" : "Willkommen im Spielzentrum der Spieler"
 				},
 			
 				"en" : {
-					"richTextWelcome" : "Welcome to the gamecenter"
+					"richTextWelcome" : "Welcome to the gamecenter of the gamer"
 				}
 			},
 		
