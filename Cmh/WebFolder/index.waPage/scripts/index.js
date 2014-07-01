@@ -24,9 +24,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		WAF.sources.varErrorMessageRequired.sync();
 		
 		// Remove error messages and error divs
-		$$("textFieldUserName").removeClass('errorDiv');
+		$$("textFieldUserName").removeClass('errorTextField');
 		$("#textFieldUserName").attr('placeholder', '');
-		$$("textFieldPassword").removeClass('errorDiv');
+		$$("textFieldPassword").removeClass('errorTextField');
 		$("#textFieldPassword").attr('placeholder', '');
 		
 	};
@@ -72,7 +72,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			// Set the error message in the username input placeholder
 			$("#textFieldUserName").attr("placeholder", varErrorMessageLoginFailed);
 			
-			// Add errorDiv class to inform the user something goes wrong
+			// Add errorTextField class to inform the user something goes wrong
 			$$("textFieldUserName").addClass("errorTextField");
 		}
 	};
@@ -180,7 +180,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		// Error handling
 		if (this.getValue() == "") {
-			this.addClass("errorTextField"); // Add css class for errorDiv
+			this.addClass("errorTextField"); // Add css class for errorTextField
 			$("#textFieldPassword").attr("placeholder", varErrorMessageRequired);
 		}
 	};// @lock
@@ -213,7 +213,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		// Error handling
 		if (this.getValue() == "") {
-			this.addClass("errorTextField"); // Add css class for errorDiv
+			this.addClass("errorTextField"); // Add css class for errorTextField
 			$("#textFieldUserName").attr("placeholder", varErrorMessageRequired);
 		}
 	};// @lock
