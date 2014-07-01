@@ -5,23 +5,25 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var translateWidgets = function () {
 		
 		// Translate Widgets
-		$$("richTextUserName").setValue(translate("index", "richTextUserName"));
-		$$("richTextPassword").setValue(translate("index", "richTextPassword"));
-		$$("richTextSignUp").setValue(translate("index", "richTextSignUp"));
-		$$("richTextLostUserCredentials").setValue(translate("index", "richTextLostUserCredentials"));
-		$$("richTextIntro").setValue(translate("index", "richTextIntro"));
-		$$("richTextHeadlineGameDescription").setValue(translate("index", "richTextHeadlineGameDescription"));
-		$$("richTextGameDescription").setValue(translate("index", "richTextGameDescription"));
-		$$("richTextHeadlineGameConcept").setValue(translate("index", "richTextHeadlineGameConcept"));
-		$$("richTextGameConcept").setValue(translate("index", "richTextGameConcept"));
-		$$("richTextGameDescription").setValue(translate("index", "richTextGameDescription"));
-		varErrorMessageRequired = translate("index", "varErrorMessageRequired");
-		varErrorMessageLoginFailed = translate("index", "varErrorMessageLoginFailed");
-		$$("buttonLogin").setValue(translate("index", "buttonLogin"));
+		objTranslation.richTextUserName = translate("index", "richTextUserName");
+		objTranslation.richTextPassword = translate("index", "richTextPassword");
+		objTranslation.richTextSignUp = translate("index", "richTextSignUp");
+		objTranslation.richTextLostUserCredentials = translate("index", "richTextLostUserCredentials");
+		objTranslation.richTextIntro = translate("index", "richTextIntro");
+		objTranslation.richTextHeadlineGameDescription = translate("index", "richTextHeadlineGameDescription");
+		objTranslation.richTextGameDescription = translate("index", "richTextGameDescription");
+		objTranslation.richTextHeadlineGameConcept = translate("index", "richTextHeadlineGameConcept");
+		objTranslation.richTextGameConcept = translate("index", "richTextGameConcept");
+		objTranslation.richTextGameConcept = translate("index", "richTextGameConcept");
+		objTranslation.errorMessageRequired = translate("index", "errorMessageRequired");
+		objTranslation.errorMessageLoginFailed = translate("index", "errorMessageLoginFailed");
+		objTranslation.buttonLogin = translate("index", "buttonLogin");
+		
+		// Translate Buttons
+		$$("buttonLogin").setValue(objTranslation.buttonLogin);
 		
 		// Sync datasources
-		WAF.sources.varErrorMessageLoginFailed.sync();
-		WAF.sources.varErrorMessageRequired.sync();
+		WAF.sources.objTranslation.sync();
 		
 		// Remove error messages and error divs
 		$$("textFieldUserName").removeClass('errorTextField');
@@ -70,7 +72,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			WAF.sources.varCurrentUser.sync();
 		
 			// Set the error message in the username input placeholder
-			$("#textFieldUserName").attr("placeholder", varErrorMessageLoginFailed);
+			$("#textFieldUserName").attr("placeholder", objTranslation.errorMessageLoginFailed);
 			
 			// Add errorTextField class to inform the user something goes wrong
 			$$("textFieldUserName").addClass("errorTextField");
@@ -181,7 +183,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		// Error handling
 		if (this.getValue() == "") {
 			this.addClass("errorTextField"); // Add css class for errorTextField
-			$("#textFieldPassword").attr("placeholder", varErrorMessageRequired);
+			$("#textFieldPassword").attr("placeholder", objTranslation.errorMessageRequired);
 		}
 	};// @lock
 
@@ -214,7 +216,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		// Error handling
 		if (this.getValue() == "") {
 			this.addClass("errorTextField"); // Add css class for errorTextField
-			$("#textFieldUserName").attr("placeholder", varErrorMessageRequired);
+			$("#textFieldUserName").attr("placeholder", objTranslation.errorMessageRequired);
 		}
 	};// @lock
 

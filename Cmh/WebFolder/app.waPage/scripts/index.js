@@ -31,10 +31,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		
 		topNavData = [ // Array with menu item objects
 			{title: objTranslation.menuGamecenter, componentpath: "/components/gamer/gamerGamecenter.waComponent", topNavItemImagePath: "/images/Medical_Office.png", topNavItemId: "navGamecenter", topNavItemClass: "topNavItemLi topNavItemSelected"},
-			//{title: objTranslation.menuManagement, componentpath: "/components/gamer/management/gamerManagementHome.waComponent", topNavItemImagePath: "/images/Medical_Invoice.png", topNavItemId: "navManagement", topNavItemClass: "topNavItemLi"},
-			//{title: objTranslation.menuNursing, componentpath: "/components/gamer/nursing/gamerNursingHome.waComponent", topNavItemImagePath: "/images/Hospital_Bed.png", topNavItemId: "navNursery", topNavItemClass: "topNavItemLi"},
-			//{title: objTranslation.menuRadiology, componentpath: "/components/gamer/radiology/gamerRadiologyHome.waComponent", topNavItemImagePath: "/images/Xray.png", topNavItemId: "navRadiology", topNavItemClass: "topNavItemLi"},
-			//{title: objTranslation.menuSurgery, componentpath: "/components/gamer/surgery/gamerSurgeryHome.waComponent", topNavItemImagePath: "/images/Group_Surgical_Team.png", topNavItemId: "navSurgery", topNavItemClass: "topNavItemLi"},
 			{title: objTranslation.menuGamehost, componentpath: "/components/gamehost/gamehostHome.waComponent", topNavItemImagePath: "/images/User_Dentist.png", topNavItemId: "navGamehost", topNavItemClass: "topNavItemLi"},
 			{title: objTranslation.menuAdmin, componentpath: "/components/administrator/administratorHome.waComponent", topNavItemImagePath: "/images/User_Dentist.png", topNavItemId: "navAdmin", topNavItemClass: "topNavItemLi"}
 		];
@@ -75,7 +71,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @region namespaceDeclaration// @startlock
 	var iconAustria = {};	// @icon
 	var iconGreatBritain = {};	// @icon
-	var richTextSignOut = {};	// @richText
+	var richTextLogout = {};	// @richText
 	var documentEvent = {};	// @document
 // @endregion// @endlock
 
@@ -113,7 +109,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
         });
 	};// @lock
 
-	richTextSignOut.click = function richTextSignOut_click (event)// @startlock
+	richTextLogout.click = function richTextLogout_click (event)// @startlock
 	{// @endlock
 		// Logout
 		WAF.directory.logout( {
@@ -178,7 +174,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @region eventManager// @startlock
 	WAF.addListener("iconAustria", "click", iconAustria.click, "WAF");
 	WAF.addListener("iconGreatBritain", "click", iconGreatBritain.click, "WAF");
-	WAF.addListener("richTextSignOut", "click", richTextSignOut.click, "WAF");
+	WAF.addListener("richTextLogout", "click", richTextLogout.click, "WAF");
 	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
 // @endregion
 };// @endlock

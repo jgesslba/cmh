@@ -90,7 +90,7 @@
 	 top: 10px;
 	 bottom: 10px;
 	 left: 10px;
-	 right: 11px;
+	 right: 13px;
 	
 	 position: absolute;
 	 
@@ -230,22 +230,6 @@
 	 
 }
 
-#richTextSignOut {
-	 z-index: 3;
-	 width: 56px;
-	 height: 15px;
-	 top: 13px;
-	 right: 52px;
-	
-	 position: absolute;
-	 text-decoration: underline;
-	 text-align: left;
-	 font-weight: normal;
-	 font-size: 12px;
-	 color: rgb(227, 227, 227);
-	 
-}
-
 #richTextCurrentUser {
 	 z-index: 2;
 	 width: 61px;
@@ -283,6 +267,22 @@
 	 right: 0px;
 	
 	 position: absolute;
+	 
+}
+
+#richTextLogout {
+	 z-index: 3;
+	 width: 56px;
+	 height: 15px;
+	 top: 13px;
+	 right: 52px;
+	
+	 position: absolute;
+	 text-decoration: underline;
+	 text-align: left;
+	 font-weight: normal;
+	 font-size: 12px;
+	 color: rgb(227, 227, 227);
 	 
 }
 
