@@ -94,21 +94,17 @@ var translations = {
 			"gamerMenu" : {
 		
 				"de" : {
-					"richTextGameCenter" : "Spiele",
 					"richTextManagement" : "Management",
 					"richTextCare" : "Pflege",
 					"richTextRadiology" : "R\u00f6ntgen",
-					"richTextSurgery" : "OP",
-					"richTextSettings" : "Meine Einstellungen"
+					"richTextSurgery" : "OP"
 				},
 			
 				"en" : {
-					"richTextGameCenter" : "Spiele",
 					"richTextManagement" : "Management",
 					"richTextCare" : "Care",
 					"richTextRadiology" : "Radiology",
-					"richTextSurgery" : "Surgery",
-					"richTextSettings" : "My Settings"
+					"richTextSurgery" : "Surgery"
 				}
 			},
 		
@@ -209,6 +205,41 @@ var translations = {
 			
 				"en" : {
 					"richTextWelcome" : "Welcome to the gamehost section"
+				}
+			},
+		
+		// @endregion
+		
+		// @region GAMEHOSTMENU
+		
+			// component gamehostMenu
+			"gamehostMenu" : {
+		
+				"de" : {
+					"richTextFinancing" : "Finanzierung",
+					"richTextHospitals" : "Krankenh\u00e4ser",
+					"richTextEmergencies" : "Notf\u00e4lle",
+					"richTextPatients" : "Patienten",
+					"richTextManagement" : "Management",
+					"richTextCare" : "Pflege",
+					"richTextRadiology" : "R\u00f6ntgen",
+					"richTextSurgery" : "OP",
+					"richTextTargetValues" : "Zielgr\u00f6\u00dfen",
+					"richTextResultWeighting" : "Ergebnisgewichtung"
+					
+				},
+			
+				"en" : {
+					"richTextFinancing" : "Financing",
+					"richTextHospitals" : "Hospitals",
+					"richTextEmergencies" : "Emergencies",
+					"richTextPatients" : "Patients",
+					"richTextManagement" : "Management",
+					"richTextCare" : "Care",
+					"richTextRadiology" : "Radiology",
+					"richTextSurgery" : "Surgery",
+					"richTextTargetValues" : "Target values",
+					"richTextResultWeighting" : "Weighting of results"
 				}
 			},
 		

@@ -13,12 +13,10 @@ function constructor (id) {
 	// @region Translation
 	var translateWidgets = function () {
 		// Get translated values
-		$comp.sourcesVar.objTranslation.richTextGameCenter = translate($comp.name, "richTextGameCenter");
 		$comp.sourcesVar.objTranslation.richTextManagement = translate($comp.name, "richTextManagement");
 		$comp.sourcesVar.objTranslation.richTextCare = translate($comp.name, "richTextCare");
 		$comp.sourcesVar.objTranslation.richTextRadiology = translate($comp.name, "richTextRadiology");
 		$comp.sourcesVar.objTranslation.richTextSurgery = translate($comp.name, "richTextSurgery");
-		$comp.sourcesVar.objTranslation.richTextSettings = translate($comp.name, "richTextSettings");
 		
 		// Sync datasources
 		$comp.sources.objTranslation.sync();
