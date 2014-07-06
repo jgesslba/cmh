@@ -22,13 +22,18 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};
 	
 	
-	// Templating menubar with Handlebars
+	// Templating top menubar with Handlebars
 	var topNavUL$ = $("#topNavUl"), // jQuery reference to the unordered list topNavUL in the containerTopNavBarCentered
 		topNavTemplate$ = $("#topNavTemplate").html(), // jQuery reference to the handlebars template for the topNavBar
 		topNavTemplateFn = Handlebars.compile(topNavTemplate$); // Function to compile the template with handlebars
 		
+	// Templating left menubar with Handlebars
+	var leftNavUL$ = $("#leftNavUl"), // jQuery reference to the unordered list topNavUL in the containerTopNavBarCentered
+		leftNavTemplate$ = $("#leftNavTemplate").html(), // jQuery reference to the handlebars template for the topNavBar
+		leftNavTemplateFn = Handlebars.compile(leftNavTemplate$); // Function to compile the template with handlebars
+		
 	
-	// Build the menubar
+	// Build the top menubar
 	function buildTopNavBar () {
 		
 		topNavData = [ // Array with menu item objects
@@ -48,9 +53,64 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		});
 		
 		// The current selected nav item is set as selected
-		var this$ = $("#" + varSelectedNav); // jQuery reference to this list item
-		this$.addClass("topNavItemSelected");
-		this$.siblings().removeClass("topNavItemSelected"); // Add a class for the selected menu item
+		if (varSelectedTopNav === 0) {
+			topNavData.forEach(function(topNavItem) {
+				// Find the selected item
+				if (topNavItem.topNavItemClass === "topNavItemLi topNavItemSelected")
+					varSelectedTopNav = topNavItem.topNavItemId;
+					//debugger;
+			});
+		}
+		
+		//debugger;
+		var this$ = $("#" + varSelectedTopNav); // jQuery reference to this list item
+			this$.addClass("topNavItemSelected");
+			this$.siblings().removeClass("topNavItemSelected"); // Add a class for the selected menu item
+		
+		// Call left menu
+		buildLeftNavBar(); // Call the function to build the menu
+	};
+	
+	// Build the left menubar
+	function buildLeftNavBar () {
+		
+		// Build menu depending on the selected leftNavBar item
+		switch(varSelectedTopNav) {
+			case "navGamecenter":
+				leftNavData = [ // Array with menu item objects
+					{title: objTranslation.menuManagement, componentpath: "/components/gamecenter/gamecenter.waComponent", menucomponentpath: "/components/gamecenter/gamecenterMenu.waComponent", leftNavItemImagePath: "/images/Medical_Office.png", leftNavItemId: "navGamecenter", leftNavItemClass: "leftNavItemLi leftNavItemSelected"},
+					{title: objTranslation.menuNursing, componentpath: "/components/gamer/gamerGame.waComponent", menucomponentpath: "/components/gamer/gamerMenu.waComponent", leftNavItemImagePath: "/images/Medical_Office.png", leftNavItemId: "navGames", leftNavItemClass: "leftNavItemLi"},
+					{title: objTranslation.menuRadiology, componentpath: "/components/gamehost/gamehostHome.waComponent", menucomponentpath: "/components/gamehost/gamehostMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navGamehost", leftNavItemClass: "leftNavItemLi"},
+					{title: objTranslation.menuSurgery, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navAdmin", leftNavItemClass: "leftNavItemLi"}
+				];
+				break;
+			case "navGames":
+				leftNavData = [];
+				break;
+			case "navGamehost":
+				leftNavData = [];
+				break;
+			case "navAdmin":
+				leftNavData = [];
+				break;
+			default:
+				leftNavData = [];
+		}
+
+		
+		// Remove a potentially existing list
+		leftNavUL$.children().remove();
+		
+		// Loop through the array and build leftNavBar
+		leftNavData.forEach(function(leftNavItem) {
+			// Append each leftNavObject of the array to the unordered list
+			leftNavUL$.append(leftNavTemplateFn(leftNavItem));
+		});
+		
+		// The current selected nav item is set as selected
+		var this$ = $("#" + varSelectedLeftNav); // jQuery reference to this list item
+		this$.addClass("leftNavItemSelected");
+		this$.siblings().removeClass("leftNavItemSelected"); // Add a class for the selected menu item
 	};
 	
 	// Resize function to show scrollbars
@@ -148,11 +208,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			var this$ = $(this); // jQuery reference to this list item
 			this$.addClass("topNavItemSelected");
 			this$.siblings().removeClass("topNavItemSelected"); // Add a class for the selected menu item
-			varSelectedNav = this$.attr("id");
+			varSelectedTopNav = this$.attr("id");
 			var componentpath = this$.children("span.topNavItemSpan").attr("data-componentpath"); // Get the path of the component
 			$$("componentAppParts").loadComponent(componentpath); // Load component
-			var menucomponentpath = this$.children("span.topNavItemSpan").attr("data-menucomponentpath"); // Get the path of the menucomponent
-			$$("componentLeftMenu").loadComponent(menucomponentpath); // Load component
+			//var menucomponentpath = this$.children("span.topNavItemSpan").attr("data-menucomponentpath"); // Get the path of the menucomponent
+			//$$("componentLeftMenu").loadComponent(menucomponentpath); // Load component
+			buildLeftNavBar();
 		});
 		
 		// Set session language for this user
@@ -170,7 +231,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		
 		// Load default components
 		$$("componentAppParts").loadComponent();
-		$$("componentLeftMenu").loadComponent();
+		//$$("componentLeftMenu").loadComponent();
 		
 		// Call the workaround function to set the right column width for the grid
 		fixGridHeaderWidth();
