@@ -1,0 +1,6 @@
+{
+    "name"    : "gamerGame",    
+    "html"    : "gamerGame.html",
+    "styles"  : [],
+    "scripts" : ["gamerGame.js"]
+}
