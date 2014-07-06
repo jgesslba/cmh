@@ -94,19 +94,21 @@ var translations = {
 			"gamerMenu" : {
 		
 				"de" : {
-					"richTextGameCenter" : "Spielzentrum",
+					"richTextGameCenter" : "Spiele",
 					"richTextManagement" : "Management",
 					"richTextCare" : "Pflege",
 					"richTextRadiology" : "R\u00f6ntgen",
-					"richTextSurgery" : "OP"
+					"richTextSurgery" : "OP",
+					"richTextSettings" : "Meine Einstellungen"
 				},
 			
 				"en" : {
-					"richTextGameCenter" : "Gamecenter",
+					"richTextGameCenter" : "Spiele",
 					"richTextManagement" : "Management",
 					"richTextCare" : "Care",
 					"richTextRadiology" : "Radiology",
-					"richTextSurgery" : "Surgery"
+					"richTextSurgery" : "Surgery",
+					"richTextSettings" : "My Settings"
 				}
 			},
 		

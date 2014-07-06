@@ -23,7 +23,6 @@ function constructor (id) {
 		// Translate component widgets on component load
 		language.getUserLanguageAsync({
         	'onSuccess': function (result) {
-        		console.log(result);
 				translateWidgets(); // Call the translation function for this page
         	},  
         	'onError': function (error) {
@@ -36,7 +35,6 @@ function constructor (id) {
 		// Translate component widgets on component load
 		language.getUserLanguageAsync({
         	'onSuccess': function (result) {
-        		console.log(result);
 				translateWidgets(); // Call the translation function for this page
         	},  
         	'onError': function (error) {
@@ -54,7 +52,6 @@ function constructor (id) {
 	// Translate component widgets on component load
 		language.getUserLanguageAsync({
         	'onSuccess': function (result) {
-        		console.log(result);
 				translateWidgets(); // Call the translation function for this page
         	},  
         	'onError': function (error) {

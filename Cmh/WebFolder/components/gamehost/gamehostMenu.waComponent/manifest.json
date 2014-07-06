@@ -1,6 +1,1 @@
-{
-    "name"    : "gamehostMenu",    
-    "html"    : "gamehostMenu.html",
-    "styles"  : [],
-    "scripts" : ["gamehostMenu.js"]
-}
+﻿{"name":"gamehostMenu","html":"gamehostMenu.html","scripts":["gamehostMenu.js"],"styles":["gamehostMenu.css"]}
