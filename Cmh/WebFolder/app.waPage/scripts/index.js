@@ -77,15 +77,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		// Build menu depending on the selected leftNavBar item
 		switch(varSelectedTopNav) {
 			case "navGamecenter":
-				leftNavData = [ // Array with menu item objects
-					{title: objTranslation.menuManagement, componentpath: "/components/gamecenter/gamecenter.waComponent", menucomponentpath: "/components/gamecenter/gamecenterMenu.waComponent", leftNavItemImagePath: "/images/Medical_Office.png", leftNavItemId: "navGamecenter", leftNavItemClass: "leftNavItemLi leftNavItemSelected"},
-					{title: objTranslation.menuNursing, componentpath: "/components/gamer/gamerGame.waComponent", menucomponentpath: "/components/gamer/gamerMenu.waComponent", leftNavItemImagePath: "/images/Medical_Office.png", leftNavItemId: "navGames", leftNavItemClass: "leftNavItemLi"},
-					{title: objTranslation.menuRadiology, componentpath: "/components/gamehost/gamehostHome.waComponent", menucomponentpath: "/components/gamehost/gamehostMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navGamehost", leftNavItemClass: "leftNavItemLi"},
-					{title: objTranslation.menuSurgery, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navAdmin", leftNavItemClass: "leftNavItemLi"}
-				];
+				leftNavData = [];
 				break;
 			case "navGames":
-				leftNavData = [];
+				leftNavData = [ // Array with menu item objects
+					{title: objTranslation.menuManagement, componentpath: "/components/gamecenter/gamecenter.waComponent", menucomponentpath: "/components/gamecenter/gamecenterMenu.waComponent", leftNavItemImagePath: "/images/Medical_Office.png", leftNavItemId: "navManagement", leftNavItemClass: "leftNavItemLi leftNavItemSelected"},
+					{title: objTranslation.menuNursing, componentpath: "/components/gamer/gamerGame.waComponent", menucomponentpath: "/components/gamer/gamerMenu.waComponent", leftNavItemImagePath: "/images/Medical_Office.png", leftNavItemId: "navNursing", leftNavItemClass: "leftNavItemLi"},
+					{title: objTranslation.menuRadiology, componentpath: "/components/gamehost/gamehostHome.waComponent", menucomponentpath: "/components/gamehost/gamehostMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navRadiology", leftNavItemClass: "leftNavItemLi"},
+					{title: objTranslation.menuSurgery, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navSurgery", leftNavItemClass: "leftNavItemLi"}
+				];
 				break;
 			case "navGamehost":
 				leftNavData = [];
@@ -213,6 +213,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			$$("componentAppParts").loadComponent(componentpath); // Load component
 			//var menucomponentpath = this$.children("span.topNavItemSpan").attr("data-menucomponentpath"); // Get the path of the menucomponent
 			//$$("componentLeftMenu").loadComponent(menucomponentpath); // Load component
+			varSelectedLeftNav = "";
 			buildLeftNavBar();
 		});
 		
