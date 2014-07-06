@@ -216,6 +216,19 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			buildLeftNavBar();
 		});
 		
+		// Set event handler for the topNavBar
+		leftNavUL$.on("click",".leftNavItemLi", function (event) {
+			var this$ = $(this); // jQuery reference to this list item
+			this$.addClass("leftNavItemSelected");
+			this$.siblings().removeClass("leftNavItemSelected"); // Add a class for the selected menu item
+			varSelectedLeftNav = this$.attr("id");
+			var componentpath = this$.children("span.leftNavItemSpan").attr("data-componentpath"); // Get the path of the component
+			//$$("componentAppParts").loadComponent(componentpath); // Load component
+			//var menucomponentpath = this$.children("span.topNavItemSpan").attr("data-menucomponentpath"); // Get the path of the menucomponent
+			//$$("componentLeftMenu").loadComponent(menucomponentpath); // Load component
+			//buildLeftNavBar();
+		});
+		
 		// Set session language for this user
 		language.setUserLanguageAsync({
         	'onSuccess': function (result) {
