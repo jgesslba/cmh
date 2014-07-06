@@ -1,0 +1,6 @@
+{
+    "name"    : "adminMenu",    
+    "html"    : "adminMenu.html",
+    "styles"  : [],
+    "scripts" : ["adminMenu.js"]
+}

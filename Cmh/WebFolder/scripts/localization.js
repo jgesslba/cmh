@@ -88,6 +88,30 @@ var translations = {
 
 	// @region GAMER
 	
+		// @region GAMERMENU
+		
+			// component gamerMenu	
+			"gamerMenu" : {
+		
+				"de" : {
+					"richTextGameCenter" : "Spielzentrum",
+					"richTextManagement" : "Management",
+					"richTextCare" : "Pflege",
+					"richTextRadiology" : "R\u00f6ntgen",
+					"richTextSurgery" : "OP"
+				},
+			
+				"en" : {
+					"richTextGameCenter" : "Gamecenter",
+					"richTextManagement" : "Management",
+					"richTextCare" : "Care",
+					"richTextRadiology" : "Radiology",
+					"richTextSurgery" : "Surgery"
+				}
+			},
+		
+		// @endregion
+
 		// @region GAMECENTER
 		
 			// component gamerGamecenter	

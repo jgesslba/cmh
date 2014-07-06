@@ -1,0 +1,6 @@
+{
+    "name"    : "gamehostMenu",    
+    "html"    : "gamehostMenu.html",
+    "styles"  : [],
+    "scripts" : ["gamehostMenu.js"]
+}

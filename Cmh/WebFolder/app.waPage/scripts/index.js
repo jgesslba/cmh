@@ -30,9 +30,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	function buildTopNavBar () {
 		
 		topNavData = [ // Array with menu item objects
-			{title: objTranslation.menuGamecenter, componentpath: "/components/gamer/gamerGamecenter.waComponent", topNavItemImagePath: "/images/Medical_Office.png", topNavItemId: "navGamecenter", topNavItemClass: "topNavItemLi topNavItemSelected"},
-			{title: objTranslation.menuGamehost, componentpath: "/components/gamehost/gamehostHome.waComponent", topNavItemImagePath: "/images/User_Dentist.png", topNavItemId: "navGamehost", topNavItemClass: "topNavItemLi"},
-			{title: objTranslation.menuAdmin, componentpath: "/components/administrator/administratorHome.waComponent", topNavItemImagePath: "/images/User_Dentist.png", topNavItemId: "navAdmin", topNavItemClass: "topNavItemLi"}
+			{title: objTranslation.menuGamecenter, componentpath: "/components/gamer/gamerGamecenter.waComponent", menucomponentpath: "/components/gamer/gamerMenu.waComponent", topNavItemImagePath: "/images/Medical_Office.png", topNavItemId: "navGamecenter", topNavItemClass: "topNavItemLi topNavItemSelected"},
+			{title: objTranslation.menuGamehost, componentpath: "/components/gamehost/gamehostHome.waComponent", menucomponentpath: "/components/gamehost/gamehostMenu.waComponent", topNavItemImagePath: "/images/User_Dentist.png", topNavItemId: "navGamehost", topNavItemClass: "topNavItemLi"},
+			{title: objTranslation.menuAdmin, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", topNavItemImagePath: "/images/User_Dentist.png", topNavItemId: "navAdmin", topNavItemClass: "topNavItemLi"}
 		];
 		
 		// Remove a potentially existing list
@@ -146,8 +146,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			this$.addClass("topNavItemSelected");
 			this$.siblings().removeClass("topNavItemSelected"); // Add a class for the selected menu item
 			varSelectedNav = this$.attr("id");
-			var componentpath = this$.children("span.topNavItemSpan").attr("data-componentpath"); // Get the path of the component which should openend via this link
+			var componentpath = this$.children("span.topNavItemSpan").attr("data-componentpath"); // Get the path of the component
 			$$("componentAppParts").loadComponent(componentpath); // Load component
+			var menucomponentpath = this$.children("span.topNavItemSpan").attr("data-menucomponentpath"); // Get the path of the menucomponent
+			$$("componentLeftMenu").loadComponent(menucomponentpath); // Load component
 		});
 		
 		// Set session language for this user
@@ -163,8 +165,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
             'params': [sessionStorage.getItem("language"),browserLanguage = browserLang = navigator.language || navigator.userLanguage]
         });
 		
-		// Load default component
+		// Load default components
 		$$("componentAppParts").loadComponent();
+		$$("componentLeftMenu").loadComponent();
 		
 		// Call the workaround function to set the right column width for the grid
 		fixGridHeaderWidth();
