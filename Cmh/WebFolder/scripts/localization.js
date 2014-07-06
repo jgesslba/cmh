@@ -68,7 +68,9 @@ var translations = {
 			"menuRadiology" : "R\u00f6ntgen",
 			"menuSurgery" : "OP",
 			"menuGamehost" : "Spielleiter",
-			"menuAdmin" : "Administrator"
+			"menuAdmin" : "Administrator",
+			"menuGame" : "Spiel",
+			"menuGamecenter" : "Spielzentrum"
 		},
 		
 		"en" : {
@@ -80,7 +82,9 @@ var translations = {
 			"menuRadiology" : "X-Ray",
 			"menuSurgery" : "Surgery",
 			"menuGamehost" : "Gamehost",
-			"menuAdmin" : "Administrator"
+			"menuAdmin" : "Administrator",
+			"menuGame" : "Game",
+			"menuGamecenter" : "Gamecenter"
 		}
 	},
 	

@@ -1,0 +1,6 @@
+{
+    "name"    : "gamecenterMenu",    
+    "html"    : "gamecenterMenu.html",
+    "styles"  : [],
+    "scripts" : ["gamecenterMenu.js"]
+}
