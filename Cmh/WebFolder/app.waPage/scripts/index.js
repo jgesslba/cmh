@@ -13,8 +13,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		objTranslation.menuSurgery = translate("app", "menuSurgery");
 		objTranslation.menuGamehost = translate("app", "menuGamehost");
 		objTranslation.menuAdmin = translate("app", "menuAdmin");
-		objTranslation.menuGame = translate("app", "menuGame");
+		objTranslation.menuGamer = translate("app", "menuGamer");
 		objTranslation.menuGamecenter = translate("app", "menuGamecenter");
+		objTranslation.menuFinancing = translate("app", "menuFinancing");
+		objTranslation.menuHospitals = translate("app", "menuHospitals");
+		objTranslation.menuEmergencies = translate("app", "menuEmergencies");
+		objTranslation.menuPatients = translate("app", "menuPatients");
+		objTranslation.menuTargetValues = translate("app", "menuTargetValues");
+		objTranslation.menuResultWeighting = translate("app", "menuResultWeighting");
+		objTranslation.menuUserAdministration = translate("app", "menuUserAdministration");
 		
 		// Sync datasources
 		WAF.sources.objTranslation.sync();
@@ -38,7 +45,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		
 		topNavData = [ // Array with menu item objects
 			{title: objTranslation.menuGamecenter, componentpath: "/components/gamecenter/gamecenter.waComponent", menucomponentpath: "/components/gamecenter/gamecenterMenu.waComponent", topNavItemImagePath: "/images/Medical_Office.png", topNavItemId: "navGamecenter", topNavItemClass: "topNavItemLi topNavItemSelected"},
-			{title: objTranslation.menuGame, componentpath: "/components/gamer/gamerGame.waComponent", menucomponentpath: "/components/gamer/gamerMenu.waComponent", topNavItemImagePath: "/images/Medical_Office.png", topNavItemId: "navGames", topNavItemClass: "topNavItemLi"},
+			{title: objTranslation.menuGamer, componentpath: "/components/gamer/gamerGame.waComponent", menucomponentpath: "/components/gamer/gamerMenu.waComponent", topNavItemImagePath: "/images/Medical_Office.png", topNavItemId: "navGamer", topNavItemClass: "topNavItemLi"},
 			{title: objTranslation.menuGamehost, componentpath: "/components/gamehost/gamehostHome.waComponent", menucomponentpath: "/components/gamehost/gamehostMenu.waComponent", topNavItemImagePath: "/images/User_Dentist.png", topNavItemId: "navGamehost", topNavItemClass: "topNavItemLi"},
 			{title: objTranslation.menuAdmin, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", topNavItemImagePath: "/images/User_Dentist.png", topNavItemId: "navAdmin", topNavItemClass: "topNavItemLi"}
 		];
@@ -79,7 +86,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			case "navGamecenter":
 				leftNavData = [];
 				break;
-			case "navGames":
+			case "navGamer":
 				leftNavData = [ // Array with menu item objects
 					{title: objTranslation.menuManagement, componentpath: "/components/gamecenter/gamecenter.waComponent", menucomponentpath: "/components/gamecenter/gamecenterMenu.waComponent", leftNavItemImagePath: "/images/Medical_Office.png", leftNavItemId: "navManagement", leftNavItemClass: "leftNavItemLi leftNavItemSelected"},
 					{title: objTranslation.menuNursing, componentpath: "/components/gamer/gamerGame.waComponent", menucomponentpath: "/components/gamer/gamerMenu.waComponent", leftNavItemImagePath: "/images/Medical_Office.png", leftNavItemId: "navNursing", leftNavItemClass: "leftNavItemLi"},
@@ -88,7 +95,19 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				];
 				break;
 			case "navGamehost":
-				leftNavData = [];
+				leftNavData = [ // Array with menu item objects
+					{title: objTranslation.menuFinancing, componentpath: "/components/gamecenter/gamecenter.waComponent", menucomponentpath: "/components/gamecenter/gamecenterMenu.waComponent", leftNavItemImagePath: "/images/Medical_Office.png", leftNavItemId: "navFinancing", leftNavItemClass: "leftNavItemLi leftNavItemSelected"},
+					{title: objTranslation.menuHospitals, componentpath: "/components/gamer/gamerGame.waComponent", menucomponentpath: "/components/gamer/gamerMenu.waComponent", leftNavItemImagePath: "/images/Medical_Office.png", leftNavItemId: "navHospitals", leftNavItemClass: "leftNavItemLi"},
+					{title: objTranslation.menuEmergencies, componentpath: "/components/gamehost/gamehostHome.waComponent", menucomponentpath: "/components/gamehost/gamehostMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navEmergencies", leftNavItemClass: "leftNavItemLi"},
+					{title: objTranslation.menuPatients, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navPatients", leftNavItemClass: "leftNavItemLi"},
+					{title: objTranslation.menuManagement, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navManagement", leftNavItemClass: "leftNavItemLi"},
+					{title: objTranslation.menuNursing, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navNursing", leftNavItemClass: "leftNavItemLi"},
+					{title: objTranslation.menuRadiology, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navRadiology", leftNavItemClass: "leftNavItemLi"},
+					{title: objTranslation.menuSurgery, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navSurgery", leftNavItemClass: "leftNavItemLi"},
+					{title: objTranslation.menuTargetValues, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navTargetValues", leftNavItemClass: "leftNavItemLi"},
+					{title: objTranslation.menuResultWeighting, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navResultWeighting", leftNavItemClass: "leftNavItemLi"},
+					{title: objTranslation.menuUserAdministration, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navUserAdmin", leftNavItemClass: "leftNavItemLi"}
+				];
 				break;
 			case "navAdmin":
 				leftNavData = [];

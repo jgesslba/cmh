@@ -69,8 +69,14 @@ var translations = {
 			"menuSurgery" : "OP",
 			"menuGamehost" : "Spielleiter",
 			"menuAdmin" : "Administrator",
-			"menuGame" : "Spiel",
-			"menuGamecenter" : "Spielzentrum"
+			"menuGamecenter" : "Spielzentrum",
+			"menuFinancing" : "Finanzierung",
+			"menuHospitals" : "Krankenh\u00e4ser",
+			"menuEmergencies" : "Notf\u00e4lle",
+			"menuPatients" : "Patienten",
+			"menuTargetValues" : "Zielgr\u00f6\u00dfen",
+			"menuResultWeighting" : "Ergebnisgewichtung",
+			"menuUserAdministration" : "Benutzerverwaltung"
 		},
 		
 		"en" : {
@@ -83,8 +89,14 @@ var translations = {
 			"menuSurgery" : "Surgery",
 			"menuGamehost" : "Gamehost",
 			"menuAdmin" : "Administrator",
-			"menuGame" : "Game",
-			"menuGamecenter" : "Gamecenter"
+			"menuGamecenter" : "Gamecenter",
+			"menuFinancing" : "Financing",
+			"menuHospitals" : "Hospitals",
+			"menuEmergencies" : "Emergencies",
+			"menuPatients" : "Patients",
+			"menuTargetValues" : "Target values",
+			"menuResultWeighting" : "Weighting of results",
+			"menuUserAdministration" : "User administration"
 		}
 	},
 	
