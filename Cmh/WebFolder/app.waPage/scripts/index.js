@@ -57,7 +57,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				});
 		
 				// The current selected nav item is set as selected
-				if (varSelectedTopNav === 0) {
+				if (varSelectedTopNav == 0) {
 					topNavData.forEach(function(topNavItem) {
 					// Find the selected item
 					if (topNavItem.topNavItemClass === "topNavItemLi topNavItemSelected")
@@ -81,6 +81,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	// Build the left menubar
 	function buildLeftNavBar () {
 		
+		varSelectedLeftNav = "";
+		
 		// Build menu depending on the selected leftNavBar item
 		menu.getLeftNavBarAsync({
         	'onSuccess': function (leftNavData) {
@@ -93,13 +95,17 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 					// Append each leftNavObject of the array to the unordered list
 					leftNavUL$.append(leftNavTemplateFn(leftNavItem));
 				});
+				
+				//debugger;
 		
 				// The current selected nav item is set as selected
-				if (varSelectedTopNav === 0) {
-					topNavData.forEach(function(topNavItem) {
+				if (varSelectedLeftNav == 0) {
+					leftNavData.forEach(function(leftNavItem) {
 					// Find the selected item
-					if (topNavItem.topNavItemClass === "topNavItemLi topNavItemSelected")
-						varSelectedTopNav = topNavItem.topNavItemId;
+					if (leftNavItem.leftNavItemClass === "leftNavItemLi leftNavItemSelected")
+					debugger;
+						varSelectedleftNav = leftNavItem.leftNavItemId;
+						$$("componentAppParts").loadComponent(leftNavItem.componentpath); // Load component
 					});
 				}
 				
@@ -212,9 +218,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			this$.addClass("topNavItemSelected");
 			this$.siblings().removeClass("topNavItemSelected"); // Add a class for the selected menu item
 			varSelectedTopNav = this$.attr("id");
-			var componentpath = this$.children("span.topNavItemSpan").attr("data-componentpath"); // Get the path of the component
-			$$("componentAppParts").loadComponent(componentpath); // Load component
-			varSelectedLeftNav = "";
+			//var componentpath = this$.children("span.topNavItemSpan").attr("data-componentpath"); // Get the path of the component
+			//$$("componentAppParts").loadComponent(componentpath); // Load component
+			//varSelectedLeftNav = "";
 			buildLeftNavBar();
 		});
 		
@@ -224,7 +230,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			this$.addClass("leftNavItemSelected");
 			this$.siblings().removeClass("leftNavItemSelected"); // Add a class for the selected menu item
 			varSelectedLeftNav = this$.attr("id");
+			varSelectedLeftNav = "";
 			var componentpath = this$.children("span.leftNavItemSpan").attr("data-componentpath"); // Get the path of the component
+			//$$("componentAppParts").loadComponent(componentpath); // Load component
 		});
 		
 		// Set session language for this user
@@ -241,7 +249,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
         });
 		
 		// Load default components
-		$$("componentAppParts").loadComponent();
+		//$$("componentAppParts").loadComponent();
 		//$$("componentLeftMenu").loadComponent();
 		
 		// Call the workaround function to set the right column width for the grid
