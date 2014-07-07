@@ -13,6 +13,12 @@ if (Gameadmin === null) {
 	var Gameadmin = directory.addGroup("Gameadmin" , "Gameadmin group");
 	directory.save(); // save the organizational groups in the directory
 }
+
+var Gamer = directory.group("Gamer"); // creates the group object
+if (Gamer === null) {
+	var Gamer = directory.addGroup("Gamer" , "Gamer group");
+	directory.save(); // save the organizational groups in the directory
+}
 	
 
 // ##### GET OR CREATE FUNCTIONAL GROUPS IN THE DIRECTORY #####

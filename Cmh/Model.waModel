@@ -11,7 +11,7 @@
 				"panelColor" : "rgb(255, 78, 89)",
 				"panel" : 
 				{
-					"isOpen" : "false",
+					"isOpen" : "true",
 					"pathVisible" : true,
 					"position" : 
 					{
@@ -38,7 +38,7 @@
 				"panelColor" : "rgb(79, 169, 151)",
 				"panel" : 
 				{
-					"isOpen" : "true",
+					"isOpen" : "false",
 					"pathVisible" : true,
 					"position" : 
 					{
@@ -52,7 +52,7 @@
 				"panelColor" : "rgb(79, 169, 151)",
 				"panel" : 
 				{
-					"isOpen" : "true",
+					"isOpen" : "false",
 					"pathVisible" : true,
 					"position" : 
 					{
@@ -529,7 +529,7 @@
 			"name" : "User",
 			"className" : "User",
 			"collectionName" : "UserCollection",
-			"scope" : "publicOnServer",
+			"scope" : "public",
 			"attributes" : 
 			[
 				{
@@ -575,12 +575,8 @@
 					"name" : "gender",
 					"kind" : "storage",
 					"scope" : "public",
-					"limiting_length" : 1,
 					"not_null" : true,
-					"type" : "string",
-					"fixedLength" : 1,
-					"minLength" : 1,
-					"maxLength" : 1
+					"type" : "bool"
 				},
 				{
 					"name" : "photo",
