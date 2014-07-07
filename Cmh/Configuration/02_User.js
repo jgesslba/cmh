@@ -25,7 +25,6 @@ newUser.phone = '+4369917062429';
 var pw = CryptoJS.MD5(newUser.userName + ':Wakanda:' + 'a').toString();
 pw = CryptoJS.SHA512(newUser.ID + pw).toString();
 newUser.password = pw;
-newUser.password = "Hallo";
 newUser.save();
 
 

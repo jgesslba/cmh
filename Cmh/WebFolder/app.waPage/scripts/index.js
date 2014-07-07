@@ -44,9 +44,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	function buildTopNavBar () {
 		
 		menu.getTopNavBarAsync({
-        	'onSuccess': function (result) {
-        		var topNavData = result;
-        		console.log(result);
+        	'onSuccess': function (topNavData) {
     
 	    		// Remove a potentially existing list
 				topNavUL$.children().remove();
@@ -73,46 +71,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				buildLeftNavBar(); // Call the function to build the menu
         	},  
         	'onError': function (error) {
-        		console.log("Fehler");
          		console.log(error);
            	}
         });
-        
-       
-		
-//		topNavData = [ // Array with menu item objects
-//			{title: objTranslation.menuGamecenter, componentpath: "/components/gamecenter/gamecenter.waComponent", menucomponentpath: "/components/gamecenter/gamecenterMenu.waComponent", topNavItemImagePath: "/images/Medical_Office.png", topNavItemId: "navGamecenter", topNavItemClass: "topNavItemLi topNavItemSelected"},
-//			{title: objTranslation.menuGamer, componentpath: "/components/gamer/gamerGame.waComponent", menucomponentpath: "/components/gamer/gamerMenu.waComponent", topNavItemImagePath: "/images/Medical_Office.png", topNavItemId: "navGamer", topNavItemClass: "topNavItemLi"},
-//			{title: objTranslation.menuGamehost, componentpath: "/components/gamehost/gamehostHome.waComponent", menucomponentpath: "/components/gamehost/gamehostMenu.waComponent", topNavItemImagePath: "/images/User_Dentist.png", topNavItemId: "navGamehost", topNavItemClass: "topNavItemLi"},
-//			{title: objTranslation.menuAdmin, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", topNavItemImagePath: "/images/User_Dentist.png", topNavItemId: "navAdmin", topNavItemClass: "topNavItemLi"}
-//		];
-		
-//		// Remove a potentially existing list
-//		topNavUL$.children().remove();
-//		
-//		// Loop through the array and build topNavBar
-//		topNavData.forEach(function(topNavItem) {
-//			// Append each topNavObject of the array to the unordered list
-//			topNavUL$.append(topNavTemplateFn(topNavItem));
-//		});
-//		
-//		// The current selected nav item is set as selected
-//		if (varSelectedTopNav === 0) {
-//			topNavData.forEach(function(topNavItem) {
-//				// Find the selected item
-//				if (topNavItem.topNavItemClass === "topNavItemLi topNavItemSelected")
-//					varSelectedTopNav = topNavItem.topNavItemId;
-//					//debugger;
-//			});
-//		}
-//		
-//		//debugger;
-//		var this$ = $("#" + varSelectedTopNav); // jQuery reference to this list item
-//			this$.addClass("topNavItemSelected");
-//			this$.siblings().removeClass("topNavItemSelected"); // Add a class for the selected menu item
-//		
-//		// Call left menu
-//		buildLeftNavBar(); // Call the function to build the menu
 	};
 	
 	// Build the left menubar
