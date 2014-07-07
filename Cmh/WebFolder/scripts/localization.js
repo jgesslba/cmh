@@ -76,7 +76,8 @@ var translations = {
 			"menuPatients" : "Patienten",
 			"menuTargetValues" : "Zielgr\u00f6\u00dfen",
 			"menuResultWeighting" : "Ergebnisgewichtung",
-			"menuUserAdministration" : "Benutzerverwaltung"
+			"menuUserAdministration" : "Benutzerverwaltung",
+			"menuDataBackup" : "Datensicherung"
 		},
 		
 		"en" : {
@@ -96,7 +97,8 @@ var translations = {
 			"menuPatients" : "Patients",
 			"menuTargetValues" : "Target values",
 			"menuResultWeighting" : "Weighting of results",
-			"menuUserAdministration" : "User administration"
+			"menuUserAdministration" : "User administration",
+			"menuDataBackup" : "Data backup"
 		}
 	},
 	

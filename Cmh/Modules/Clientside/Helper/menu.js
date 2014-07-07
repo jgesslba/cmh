@@ -78,7 +78,10 @@ exports.getLeftNavBar = function getLeftNavBar (selectedTopNav, objTranslation) 
 			];
 			break;
 		case "navGameadmin":
-			leftNavData = [];
+			leftNavData = [
+				{title: objTranslation.menuUserAdministration, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navUserAdmin", leftNavItemClass: "leftNavItemLi leftNavItemSelected"},
+				{title: objTranslation.menuDataBackup, componentpath: "/components/administrator/administratorHome.waComponent", menucomponentpath: "/components/administrator/adminMenu.waComponent", leftNavItemImagePath: "/images/User_Dentist.png", leftNavItemId: "navDataBackup", leftNavItemClass: "leftNavItemLi"}
+			];
 			break;
 		default:
 			leftNavData = [];

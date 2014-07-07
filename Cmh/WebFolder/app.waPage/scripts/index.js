@@ -22,6 +22,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		objTranslation.menuTargetValues = translate("app", "menuTargetValues");
 		objTranslation.menuResultWeighting = translate("app", "menuResultWeighting");
 		objTranslation.menuUserAdministration = translate("app", "menuUserAdministration");
+		objTranslation.menuDataBackup = translate("app", "menuDataBackup");
 		
 		// Sync datasources
 		WAF.sources.objTranslation.sync();

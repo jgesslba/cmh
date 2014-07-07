@@ -1,4 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?><permissions>
 	<allow type="module" resource="Clientside/Helper/language" action="executeFromClient"/>
 	<allow type="module" resource="Clientside/Helper/menu" action="executeFromClient"/>
+	<allow action="read" groupName="User_Read" groupID="EDE7AE7DF67F425D81612B54E92FC259" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="create" groupName="User_Create" groupID="C6BF37F63B8C436EA1C495D74DA92B2D" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="update" groupName="User_Update" groupID="265C5E4E403E4545AC8DF794D925DA5F" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="remove" groupName="User_Remove" groupID="357253C5332F4F099DB9127F31FA1046" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="describe" groupName="User_Describe" groupID="E89066770B314ECA89A94C3F764DA987" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="execute" groupName="User_Execute" groupID="C0733479DC68412BA11E5414EABE4D4A" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="promote" groupName="User_Promote" groupID="828617CB5F55464797BC2F2E2346A022" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
 </permissions>
