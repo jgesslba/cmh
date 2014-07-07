@@ -30,7 +30,7 @@ function constructor (id) {
 	
 	WAF.addListener("iconAustria", "click", function(event) {
 		// Translate component widgets on component load
-		language.getUserLanguageAsync({
+		language.getSessionLanguageAsync({
       		'onSuccess': function (result) {
 				translateWidgets(); // Call the translation function for this page
        		},  
@@ -42,7 +42,7 @@ function constructor (id) {
   	
  	WAF.addListener("iconGreatBritain", "click", function(event) {
 		// Translate component widgets on component load
-		language.getUserLanguageAsync({
+		language.getSessionLanguageAsync({
        		'onSuccess': function (result) {
 				translateWidgets(); // Call the translation function for this page
        		},  
@@ -56,7 +56,7 @@ function constructor (id) {
 	this.load = function (data) {// @lock
 
 	// Translate component widgets on component load
-	language.getUserLanguageAsync({
+	language.getSessionLanguageAsync({
        	'onSuccess': function (result) {
 			translateWidgets(); // Call the translation function
        	},  

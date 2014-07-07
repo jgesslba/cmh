@@ -162,7 +162,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	iconAustria.click = function iconAustria_click (event)// @startlock
 	{// @endlock
 		// Set session language for this user
-		language.setUserLanguageAsync({
+		language.setSessionLanguageAsync({
         	'onSuccess': function (result) {
         		sessionStorage.setItem("language", result);
 				translateWidgets(); // Call the translation function for this page
@@ -178,7 +178,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	iconGreatBritain.click = function iconGreatBritain_click (event)// @startlock
 	{// @endlock
 		// Set session language for this user
-		language.setUserLanguageAsync({
+		language.setSessionLanguageAsync({
         	'onSuccess': function (result) {
         		sessionStorage.setItem("language", result);
 				translateWidgets(); // Call the translation function for this page
@@ -250,7 +250,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		});
 		
 		// Set session language for this user
-		language.setUserLanguageAsync({
+		language.setSessionLanguageAsync({
         	'onSuccess': function (result) {
         		sessionStorage.setItem("language", result);
 				translateWidgets(); // Call the translation function

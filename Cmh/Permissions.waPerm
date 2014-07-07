@@ -1,3 +1,4 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?><permissions>
 	<allow type="module" resource="Clientside/Helper/language" action="executeFromClient"/>
+	<allow type="module" resource="Clientside/Helper/menu" action="executeFromClient"/>
 </permissions>

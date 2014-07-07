@@ -8,7 +8,7 @@
 
 // ##### Set and return current user language #####
 
-exports.setUserLanguage = function setSessionLanguage (userLanguage, browserLanguage) {
+exports.setSessionLanguage = function setSessionLanguage (userLanguage, browserLanguage) {
 	// Identify language
 	if (!userLanguage)
 		userLanguage = browserLanguage;
@@ -27,7 +27,7 @@ exports.setUserLanguage = function setSessionLanguage (userLanguage, browserLang
 
 // ##### Return current user language #####
 
-exports.getUserLanguage = function getSessionLanguage () {
+exports.getSessionLanguage = function getSessionLanguage () {
 	var myUser = currentUser();
 	var userStorage = myUser.storage;
 	return userStorage["language"];
