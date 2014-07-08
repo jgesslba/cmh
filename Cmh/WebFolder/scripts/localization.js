@@ -71,7 +71,7 @@ var translations = {
 			"menuGameadmin" : "Administrator",
 			"menuGamecenter" : "Spielzentrum",
 			"menuFinancing" : "Finanzierung",
-			"menuHospitals" : "Krankenh\u00e4ser",
+			"menuHospitals" : "Krankenh\u00e4user",
 			"menuEmergencies" : "Notf\u00e4lle",
 			"menuPatients" : "Patienten",
 			"menuTargetValues" : "Zielgr\u00f6\u00dfen",
