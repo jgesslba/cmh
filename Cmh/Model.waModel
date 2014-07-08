@@ -11,7 +11,7 @@
 				"panelColor" : "rgb(255, 78, 89)",
 				"panel" : 
 				{
-					"isOpen" : "true",
+					"isOpen" : "false",
 					"pathVisible" : true,
 					"position" : 
 					{
@@ -86,6 +86,19 @@
 					{
 						"X" : 406,
 						"Y" : 26
+					}
+				}
+			},
+			"Testclass" : 
+			{
+				"panelColor" : "#B2A2C7",
+				"panel" : 
+				{
+					"isOpen" : "true",
+					"position" : 
+					{
+						"X" : 25,
+						"Y" : 20
 					}
 				}
 			}
@@ -517,6 +530,31 @@
 					"scope" : "public",
 					"from" : "model.Gamer.entityMethods.getTopMenuArray",
 					"userDefined" : true
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
+				}
+			]
+		},
+		{
+			"name" : "Testclass",
+			"className" : "Testclass",
+			"collectionName" : "TestclassCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
+				{
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				}
 			],
 			"key" : 
