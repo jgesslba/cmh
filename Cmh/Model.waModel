@@ -11,12 +11,12 @@
 				"panelColor" : "rgb(255, 78, 89)",
 				"panel" : 
 				{
-					"isOpen" : "false",
+					"isOpen" : "true",
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 43,
-						"Y" : 23
+						"X" : 33,
+						"Y" : 13
 					}
 				}
 			},
@@ -38,12 +38,12 @@
 				"panelColor" : "rgb(79, 169, 151)",
 				"panel" : 
 				{
-					"isOpen" : "false",
+					"isOpen" : "true",
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 39,
-						"Y" : 35
+						"X" : 710,
+						"Y" : 23
 					}
 				}
 			},
@@ -52,12 +52,12 @@
 				"panelColor" : "rgb(79, 169, 151)",
 				"panel" : 
 				{
-					"isOpen" : "false",
+					"isOpen" : "true",
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 471,
-						"Y" : 37
+						"X" : 423,
+						"Y" : 543
 					}
 				}
 			},
@@ -89,16 +89,17 @@
 					}
 				}
 			},
-			"Testclass" : 
+			"Gamehost" : 
 			{
-				"panelColor" : "#B2A2C7",
+				"panelColor" : "#B8CCE4",
 				"panel" : 
 				{
 					"isOpen" : "true",
+					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 25,
-						"Y" : 20
+						"X" : 444,
+						"Y" : 23
 					}
 				}
 			}
@@ -164,6 +165,7 @@
 					"name" : "iso",
 					"kind" : "storage",
 					"scope" : "public",
+					"indexed" : true,
 					"unique" : true,
 					"not_null" : true,
 					"type" : "string",
@@ -253,6 +255,14 @@
 					"path" : "game"
 				},
 				{
+					"name" : "gamehosts",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "GamehostCollection",
+					"reversePath" : true,
+					"path" : "game"
+				},
+				{
 					"name" : "createdAt",
 					"kind" : "storage",
 					"scope" : "public",
@@ -287,90 +297,6 @@
 					"scope" : "public",
 					"type" : "image",
 					"path" : "createdBy.photo"
-				},
-				{
-					"name" : "modifiedAt",
-					"kind" : "storage",
-					"scope" : "public",
-					"type" : "date",
-					"simpleDate" : false,
-					"defaultFormat" : 
-					[
-						{
-							"format" : "dd/mm/yy",
-							"presentation" : "text"
-						}
-					]
-				},
-				{
-					"name" : "modifiedBy",
-					"kind" : "relatedEntity",
-					"scope" : "public",
-					"type" : "User",
-					"path" : "User"
-				},
-				{
-					"name" : "modifiedByFullName",
-					"kind" : "alias",
-					"scope" : "public",
-					"type" : "string",
-					"path" : "modifiedBy.fullName"
-				},
-				{
-					"name" : "modifiedByPhoto",
-					"kind" : "alias",
-					"scope" : "public",
-					"type" : "image",
-					"path" : "modifiedBy.photo"
-				},
-				{
-					"name" : "viewedAt",
-					"kind" : "storage",
-					"scope" : "public",
-					"type" : "date",
-					"simpleDate" : false
-				},
-				{
-					"name" : "viewedBy",
-					"kind" : "relatedEntity",
-					"scope" : "public",
-					"type" : "User",
-					"path" : "User"
-				},
-				{
-					"name" : "viewedByFullName",
-					"kind" : "alias",
-					"scope" : "public",
-					"type" : "string",
-					"path" : "viewedBy.fullName"
-				},
-				{
-					"name" : "viewedByPhoto",
-					"kind" : "alias",
-					"scope" : "public",
-					"type" : "image",
-					"path" : "viewedBy.photo"
-				},
-				{
-					"name" : "mainGameHost",
-					"kind" : "relatedEntity",
-					"scope" : "public",
-					"type" : "User",
-					"path" : "User"
-				},
-				{
-					"name" : "mainGameHostFullName",
-					"kind" : "alias",
-					"scope" : "public",
-					"type" : "string",
-					"path" : "mainGameHost.fullName"
-				},
-				{
-					"name" : "mainGameHostPhoto",
-					"kind" : "alias",
-					"scope" : "public",
-					"type" : "image",
-					"path" : "mainGameHost.photo"
 				},
 				{
 					"name" : "placeNextMeeting",
@@ -425,6 +351,45 @@
 					"kind" : "onRestrictingQuery",
 					"from" : "model.Game.events.onRestrictingQuery",
 					"userDefined" : true
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
+				}
+			]
+		},
+		{
+			"name" : "Gamehost",
+			"className" : "Gamehost",
+			"collectionName" : "GamehostCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
+				{
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
+				},
+				{
+					"name" : "user",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "User",
+					"path" : "User"
+				},
+				{
+					"name" : "game",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "Game",
+					"path" : "Game"
 				}
 			],
 			"key" : 
@@ -539,31 +504,6 @@
 			]
 		},
 		{
-			"name" : "Testclass",
-			"className" : "Testclass",
-			"collectionName" : "TestclassCollection",
-			"scope" : "public",
-			"attributes" : 
-			[
-				{
-					"name" : "ID",
-					"kind" : "storage",
-					"scope" : "public",
-					"indexed" : true,
-					"unique" : true,
-					"autosequence" : true,
-					"type" : "long",
-					"indexKind" : "btree"
-				}
-			],
-			"key" : 
-			[
-				{
-					"name" : "ID"
-				}
-			]
-		},
-		{
 			"name" : "User",
 			"className" : "User",
 			"collectionName" : "UserCollection",
@@ -634,6 +574,7 @@
 					"name" : "userName",
 					"kind" : "storage",
 					"scope" : "public",
+					"indexed" : true,
 					"unique" : true,
 					"not_null" : true,
 					"type" : "string",
@@ -650,6 +591,7 @@
 					"name" : "email",
 					"kind" : "storage",
 					"scope" : "public",
+					"indexed" : true,
 					"unique" : true,
 					"not_null" : true,
 					"type" : "string",
@@ -698,28 +640,12 @@
 					"path" : "createdBy"
 				},
 				{
-					"name" : "gameModifications",
+					"name" : "gamehostCollection",
 					"kind" : "relatedEntities",
 					"scope" : "public",
-					"type" : "GameCollection",
+					"type" : "GamehostCollection",
 					"reversePath" : true,
-					"path" : "modifiedBy"
-				},
-				{
-					"name" : "gameViewings",
-					"kind" : "relatedEntities",
-					"scope" : "public",
-					"type" : "GameCollection",
-					"reversePath" : true,
-					"path" : "viewedBy"
-				},
-				{
-					"name" : "mainGameHosts",
-					"kind" : "relatedEntities",
-					"scope" : "public",
-					"type" : "GameCollection",
-					"reversePath" : true,
-					"path" : "mainGameHost"
+					"path" : "user"
 				}
 			],
 			"events" : 
@@ -727,6 +653,11 @@
 				{
 					"kind" : "onSave",
 					"from" : "model.User.events.onSave",
+					"userDefined" : true
+				},
+				{
+					"kind" : "onRestrictingQuery",
+					"from" : "model.User.events.onRestrictingQuery",
 					"userDefined" : true
 				}
 			],
