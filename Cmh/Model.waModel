@@ -42,8 +42,8 @@
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 710,
-						"Y" : 23
+						"X" : 721,
+						"Y" : 19
 					}
 				}
 			},
@@ -56,8 +56,8 @@
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 423,
-						"Y" : 543
+						"X" : 424,
+						"Y" : 527
 					}
 				}
 			},
@@ -98,8 +98,8 @@
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 444,
-						"Y" : 23
+						"X" : 440,
+						"Y" : 17
 					}
 				}
 			}
@@ -573,7 +573,6 @@
 					"name" : "userName",
 					"kind" : "storage",
 					"scope" : "public",
-					"indexed" : true,
 					"unique" : true,
 					"not_null" : true,
 					"type" : "string",
@@ -590,7 +589,6 @@
 					"name" : "email",
 					"kind" : "storage",
 					"scope" : "public",
-					"indexed" : true,
 					"unique" : true,
 					"not_null" : true,
 					"type" : "string",
