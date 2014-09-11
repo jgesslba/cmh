@@ -581,7 +581,7 @@
 				{
 					"name" : "password",
 					"kind" : "storage",
-					"scope" : "public",
+					"scope" : "publicOnServer",
 					"not_null" : true,
 					"type" : "string"
 				},

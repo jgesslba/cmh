@@ -79,8 +79,6 @@ if (User_Promote === null) {
 	directory.save(); // save the organizational groups in the directory
 }
 
-
-
 var Game_Read = directory.group("Game_Read"); // creates the group object
 if (Game_Read === null) {
 	var Game_Read = directory.addGroup("Game_Read", "Game_Read group");
