@@ -67,7 +67,7 @@ model.User.events.onRestrictingQuery = function() {
 	
 	// Get role of the user
 	var session = currentSession();
-	if (session.belongsTo('Admin') || session.belongsTo('Gamehost'))
+	if (session.belongsTo('Admin') || session.belongsTo('Internal') || session.belongsTo('Gamehost'))
 		resultCollection = ds.User.all(); // Admin user gets all entities
 		
 	// Result

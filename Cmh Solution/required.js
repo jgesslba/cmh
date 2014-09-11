@@ -7,6 +7,7 @@ function Login(userName, password, passwordIsKey) {
 	if (theDirectoryUser != null) { // theDirectoryUser exists in the directory
 		return false; // Allow directory authentication
 	} else { // theDirectoryUser does not exist in the directory. So use data from the project for login
+		debugger;
 		result = {error: 1024, errorMessage: 'Invalid login'}; // The result is set to the wakanda default error dialog and a custom error message by default
 		var theProjectUser = ds.User({userName: userName}); // The user from the project with the given userName is queried
 		
@@ -17,11 +18,13 @@ function Login(userName, password, passwordIsKey) {
 		if (theProjectUser != null) { // theProjectUser exists in the project user store 
 			// See if the stored hash value is correct
 			var hashValue = '';
-			if (passwordIsKey) { // The passwordIsKey is true and therefore a passwordIsKey should be used				
+			if (passwordIsKey) { // The passwordIsKey is true and therefore a passwordIsKey should be used
+			var pw = CryptoJS.MD5(newUser.userName + ':Wakanda:' + 'a').toString();				
 				hashValue = CryptoJS.SHA512(theProjectUser.ID + password).toString();
 				
 			} else { // The passwordIsKey is false and therefore no passwordIsKey should be used. The HA1 hash of the directory for userName and password is used.
-				hashValue = directory.computeHA1(userName, password);
+				// hashValue = directory.computeHA1(userName, password);
+				hashValue = password;
 			}
 					
 			if (theProjectUser.password === hashValue) {
