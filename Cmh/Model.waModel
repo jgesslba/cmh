@@ -573,6 +573,7 @@
 					"name" : "userName",
 					"kind" : "storage",
 					"scope" : "public",
+					"indexed" : true,
 					"unique" : true,
 					"not_null" : true,
 					"type" : "string",
