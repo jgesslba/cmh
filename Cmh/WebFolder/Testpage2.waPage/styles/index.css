@@ -3,12 +3,12 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
-#button1 {
-	 z-index: 1;
-	 width: 92px;
-	 height: 22px;
-	 top: 152px;
-	 left: 104px;
+#richText1 {
+	 z-index: 2;
+	 width: 50px;
+	 height: 16px;
+	 top: 155px;
+	 left: 59px;
 	
 	 position: absolute;
 	 
