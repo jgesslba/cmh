@@ -8,7 +8,7 @@
 	<group name="Game_Read" ID="C93627FF578E439E90BED8E2E25E2053" fullName="Game_Read group"/>
 	<group name="Internal" ID="76B2680B40044F75A5599C3969C9DE01" fullName="Internal"/>
 	<group name="Gamer" ID="EB48AF2A0C899241855A2A4B83C2CB37" fullName="Gamer group"/>
-	<group ID="EDE7AE7DF67F425D81612B54E92FC259" name="User_Read"/>
+	<group ID="EDE7AE7DF67F425D81612B54E92FC259" name="User_Read">	</group>
 	<group ID="C6BF37F63B8C436EA1C495D74DA92B2D" name="User_Create"/>
 	<group ID="265C5E4E403E4545AC8DF794D925DA5F" name="User_Update"/>
 	<group ID="357253C5332F4F099DB9127F31FA1046" name="User_Remove"/>
