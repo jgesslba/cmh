@@ -142,15 +142,15 @@ if (Game_Read === null) {
 
 // MODEL
 
-Admin.putInto(Model_Read); // put the organizational Admin group into the functional Model_Read group
-Admin.putInto(Model_Create); // put the organizational Admin group into the functional Model_Create group
-Admin.putInto(Model_Update); // put the organizational Admin group into the functional Model_Update group
-Admin.putInto(Model_Remove); // put the organizational Admin group into the functional Model_Remove group
-Admin.putInto(Model_Describe); // put the organizational Admin group into the functional Model_Describe group
-Admin.putInto(Model_Execute); // put the organizational Admin group into the functional Model_Execute group
-Admin.putInto(Model_Promote); // put the organizational Admin group into the functional Model_Promote group
+Internal.putInto(Model_Read); // put the organizational Admin group into the functional Model_Read group
+Internal.putInto(Model_Create); // put the organizational Admin group into the functional Model_Create group
+Internal.putInto(Model_Update); // put the organizational Admin group into the functional Model_Update group
+Internal.putInto(Model_Remove); // put the organizational Admin group into the functional Model_Remove group
+Internal.putInto(Model_Describe); // put the organizational Admin group into the functional Model_Describe group
+Internal.putInto(Model_Execute); // put the organizational Admin group into the functional Model_Execute group
+Internal.putInto(Model_Promote); // put the organizational Admin group into the functional Model_Promote group
 
-Internal.putInto(Model_Read); // put the organizational Internal group into the functional Model_Read group
+Admin.putInto(Model_Read); // put the organizational Internal group into the functional Model_Read group
 Gameadmin.putInto(Model_Read); // put the organizational Gameadmin group into the functional Model_Read group
 Gamehost.putInto(Model_Read); // put the organizational Gamehost group into the functional Model_Read group
 Gamer.putInto(Model_Read); // put the organizational Gamer group into the functional Model_Read group
@@ -191,6 +191,7 @@ Gamehost.putInto(User_Execute); // put the organizational Gamehost group into th
 Gamehost.putInto(User_Promote); // put the organizational Gamehost group into the functional User_Promote group
 
 Gamer.putInto(User_Read); // put the organizational Gamer group into the functional User_Read group
+Gamer.putInto(User_Update); // put the organizational Gamer group into the functional User_Update group
 
 
 // GAME CLASS
