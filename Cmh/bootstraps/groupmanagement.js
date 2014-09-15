@@ -153,6 +153,7 @@ Admin.putInto(Model_Promote); // put the organizational Admin group into the fun
 Internal.putInto(Model_Read); // put the organizational Internal group into the functional Model_Read group
 Gameadmin.putInto(Model_Read); // put the organizational Gameadmin group into the functional Model_Read group
 Gamehost.putInto(Model_Read); // put the organizational Gamehost group into the functional Model_Read group
+Gamer.putInto(Model_Read); // put the organizational Gamer group into the functional Model_Read group
 
 
 // USER CLASS
@@ -188,6 +189,8 @@ Gamehost.putInto(User_Remove); // put the organizational Gamehost group into the
 Gamehost.putInto(User_Describe); // put the organizational Gamehost group into the functional User_Describe group
 Gamehost.putInto(User_Execute); // put the organizational Gamehost group into the functional User_Execute group
 Gamehost.putInto(User_Promote); // put the organizational Gamehost group into the functional User_Promote group
+
+Gamer.putInto(User_Read); // put the organizational Gamer group into the functional User_Read group
 
 
 // GAME CLASS
