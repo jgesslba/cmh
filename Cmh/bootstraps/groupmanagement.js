@@ -150,6 +150,10 @@ Admin.putInto(Model_Describe); // put the organizational Admin group into the fu
 Admin.putInto(Model_Execute); // put the organizational Admin group into the functional Model_Execute group
 Admin.putInto(Model_Promote); // put the organizational Admin group into the functional Model_Promote group
 
+Internal.putInto(Model_Read); // put the organizational Internal group into the functional Model_Read group
+Gameadmin.putInto(Model_Read); // put the organizational Gameadmin group into the functional Model_Read group
+Gamehost.putInto(Model_Read); // put the organizational Gamehost group into the functional Model_Read group
+
 
 // USER CLASS
 
