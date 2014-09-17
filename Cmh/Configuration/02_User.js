@@ -1,4 +1,4 @@
-﻿// ##### DELETE ALL USERS #####
+// ##### DELETE ALL USERS #####
 
 ds.User.remove();
 
@@ -19,7 +19,7 @@ newUser.email = "joerg.gesslbauer@me.com";
 newUser.userName = "gameadmin";
 newUser.role = "Gameadmin";
 newUser.photo = loadImage(ds.getModelFolder().path + "WebFolder/images/foto/joerg.JPG"); // Just necessary if you don't want to use the avatar foto
-newUser.gender = 0;
+newUser.gender = "m";
 newUser.country = ds.Country.find("iso == :1", "at");
 newUser.phone = '+4369917062429';
 var pw = CryptoJS.MD5(newUser.userName + ':Wakanda:' + 'a').toString();
@@ -37,7 +37,7 @@ newUser.email = "joerg.gesslbauer@gmail.com";
 newUser.userName = "gamehost";
 newUser.role = "Gamehost";
 newUser.photo = loadImage(ds.getModelFolder().path + "WebFolder/images/foto/joerg.JPG"); // Just necessary if you don't want to use the avatar foto
-newUser.gender = 0;
+newUser.gender = "w";
 newUser.country = ds.Country.find("iso == :1", "at");
 newUser.phone = '+4369917062429';
 var pw = CryptoJS.MD5(newUser.userName + ':Wakanda:' + 'a').toString();
@@ -55,7 +55,7 @@ newUser.email = "joerg.gesslbauer@fhwn.ac.at";
 newUser.userName = "gamer";
 newUser.role = "Gamer";
 newUser.photo = loadImage(ds.getModelFolder().path + "WebFolder/images/foto/joerg.JPG"); // Just necessary if you don't want to use the avatar foto
-newUser.gender = 0;
+newUser.gender = "m";
 newUser.country = ds.Country.find("iso == :1", "at");
 newUser.phone = '+4369917062429';
 var pw = CryptoJS.MD5(newUser.userName + ':Wakanda:' + 'a').toString();
