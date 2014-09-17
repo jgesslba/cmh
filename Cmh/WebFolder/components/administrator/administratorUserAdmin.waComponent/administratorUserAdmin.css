@@ -6,9 +6,9 @@
 #{id}label2 {
 	 z-index: 14;
 	 width: 95px;
-	 height: 16px;
-	 top: 180px;
-	 left: 197px;
+	 height: 13px;
+	 top: 213px;
+	 left: 198px;
 	
 	 position: absolute;
 	 font-weight: bold;
@@ -20,8 +20,8 @@
 	 z-index: 15;
 	 width: 177px;
 	 height: 26px;
-	 top: 175px;
-	 left: 297px;
+	 top: 231px;
+	 left: 198px;
 	
 	 position: absolute;
 	 
@@ -30,8 +30,8 @@
 #{id}image1 {
 	 width: 110px;
 	 height: 110px;
-	 top: 46px;
-	 left: 39px;
+	 top: 50px;
+	 left: 50px;
 	
 	 position: absolute;
 	 
@@ -40,9 +40,9 @@
 #{id}label7 {
 	 z-index: 13;
 	 width: 100px;
-	 height: 16px;
-	 top: 268px;
-	 left: 197px;
+	 height: 13px;
+	 top: 335px;
+	 left: 198px;
 	
 	 position: absolute;
 	 font-weight: bold;
@@ -52,10 +52,10 @@
 
 #{id}textField5 {
 	 z-index: 13;
-	 width: 350px;
-	 height: 22px;
-	 top: 265px;
-	 left: 302px;
+	 width: 450px;
+	 height: 25px;
+	 top: 353px;
+	 left: 198px;
 	
 	 position: absolute;
 	 
@@ -64,9 +64,9 @@
 #{id}label6 {
 	 z-index: 12;
 	 width: 100px;
-	 height: 16px;
-	 top: 225px;
-	 left: 197px;
+	 height: 13px;
+	 top: 275px;
+	 left: 198px;
 	
 	 position: absolute;
 	 font-weight: bold;
@@ -76,10 +76,10 @@
 
 #{id}textField4 {
 	 z-index: 12;
-	 width: 350px;
-	 height: 22px;
-	 top: 222px;
-	 left: 302px;
+	 width: 450px;
+	 height: 25px;
+	 top: 293px;
+	 left: 198px;
 	
 	 position: absolute;
 	 
@@ -88,9 +88,9 @@
 #{id}label4 {
 	 z-index: 8;
 	 width: 100px;
-	 height: 16px;
-	 top: 135px;
-	 left: 197px;
+	 height: 13px;
+	 top: 152px;
+	 left: 198px;
 	
 	 position: absolute;
 	 font-weight: bold;
@@ -100,10 +100,10 @@
 
 #{id}textField3 {
 	 z-index: 8;
-	 width: 350px;
-	 height: 22px;
-	 top: 132px;
-	 left: 302px;
+	 width: 450px;
+	 height: 25px;
+	 top: 170px;
+	 left: 198px;
 	
 	 position: absolute;
 	 
@@ -112,7 +112,7 @@
 #{id}label3 {
 	 z-index: 6;
 	 width: 100px;
-	 height: 16px;
+	 height: 13px;
 	 top: 92px;
 	 left: 197px;
 	
@@ -124,10 +124,10 @@
 
 #{id}textField2 {
 	 z-index: 6;
-	 width: 350px;
-	 height: 22px;
-	 top: 89px;
-	 left: 302px;
+	 width: 450px;
+	 height: 25px;
+	 top: 110px;
+	 left: 197px;
 	
 	 position: absolute;
 	 
@@ -136,9 +136,9 @@
 #{id}label1 {
 	 z-index: 2;
 	 width: 100px;
-	 height: 16px;
-	 top: 49px;
-	 left: 197px;
+	 height: 13px;
+	 top: 32px;
+	 left: 198px;
 	
 	 position: absolute;
 	 font-weight: bold;
@@ -148,10 +148,10 @@
 
 #{id}textField1 {
 	 z-index: 2;
-	 width: 350px;
-	 height: 22px;
-	 top: 46px;
-	 left: 302px;
+	 width: 450px;
+	 height: 25px;
+	 top: 50px;
+	 left: 198px;
 	
 	 position: absolute;
 	 
@@ -160,7 +160,7 @@
 #{id}container1 {
 	 z-index: 8;
 	 width: 700px;
-	 height: 377px;
+	 height: 457px;
 	 top: 392px;
 	 left: 0px;
 	
@@ -170,8 +170,8 @@
 
 #{id}richText2 {
 	 z-index: 5;
-	 width: 51px;
-	 height: 24px;
+	 width: 186px;
+	 height: 22px;
 	 top: 352px;
 	 left: 0px;
 	
@@ -229,7 +229,7 @@
 
 #{id}richTextTitle {
 	 z-index: 2;
-	 width: 113px;
+	 width: 150px;
 	 height: 24px;
 	 top: 0px;
 	 left: 0px;
@@ -244,8 +244,8 @@
 	 z-index: 23;
 	 width: 70px;
 	 height: 22px;
-	 top: 306px;
-	 left: 502px;
+	 top: 405px;
+	 left: 372px;
 	
 	 position: absolute;
 	 background-color: rgb(255, 0, 0);
@@ -334,9 +334,9 @@
 #{id}buttonSave {
 	 z-index: 22;
 	 width: 70px;
-	 height: 22px;
-	 top: 306px;
-	 left: 582px;
+	 height: 26px;
+	 top: 394px;
+	 left: 199px;
 	
 	 position: absolute;
 	 border-top-color: transparent;
