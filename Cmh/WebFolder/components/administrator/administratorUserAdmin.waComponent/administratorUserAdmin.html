@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html><section data-group="[]" class=".fileUploadPassPhoto">
+﻿<!DOCTYPE html><section data-group="[['fileUploadPassPhoto']]" class=".fileUploadPassPhoto">
     <meta name="generator" content="Wakanda GUIDesigner"/>
     <meta name="WAF.catalog" content="User"/>
     <meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="User" data-scope="local" data-lib="WAF" data-id="{id}user" data-dataType="string" data-autoLoad="true" content="user"/>
@@ -25,9 +25,18 @@
  	 	 		<button id="{id}buttonDelete" data-type="button" data-text="Löschen" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="{id}user" data-action="remove" class="waf-widget waf-button"></button>
  	 	 		<ul id="{id}radioGroup1" data-type="radioGroup" data-lib="WAF" data-label-position="left" data-label="Geschlecht" data-display="horizontal" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding-out="{id}{id}user.gender" data-autoDispatch="true" class="waf-widget waf-radioGroup"><li><input type="radio" value="m" name="radioGroup1" id="{id}radioGroup1-0"/><label for="{id}radioGroup1-0">Männlich</label></li><li><input type="radio" value="w" name="radioGroup1" id="{id}radioGroup1-1"/><label for="{id}radioGroup1-1">Weiblich</label></li></ul>
  	 	 			<label id="{id}label11" for="{id}radioGroup1" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-label waf-label-radiogroup">Geschlecht</label>
- 	 	 							</div>
+ 	 	 								<div id="{id}fileUploadPassPhoto" data-userAction="Ask the user" data-type="fileUpload" data-text=" " data-notification="true" data-maxfilesize-unity="KB" data-maxfilesize="-1" data-maxfiles="-1" data-listStyle="menu" data-linked-tag="{id}button1,{id}button2,{id}button3,{id}button4,{id}container2" data-lib="WAF" data-label-position="left" data-label="" data-folder="tmp" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="{id}user.photo" data-autoUpload="true" data-action="false" class="waf-widget waf-fileUpload fileUploadPassPhoto">
+ 	 	 	</div>
+ 	 		</div>
  	 			<button id="{id}buttonAdd" data-type="button" data-text="Neuen Benutzer anlegen" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="{id}user" data-action="create" class="waf-widget waf-button waf-role-smUploader"></button>
  	 			
-		<div id="{id}dataGrid2" data-type="dataGrid" data-lib="WAF" data-binding="{id}user" class="waf-widget waf-dataGrid" data-label="" data-label-position="top" data-draggable="false" data-readOnly="true" data-header-hide="false" data-selection-mode="single" data-display-error="false" data-footer-text="item(s)" data-column="[{'sourceAttID':'userName','colID':'userName','width':'150','title':'Benutzername'},{'sourceAttID':'firstName','colID':'firstName','width':'150','title':'Vorname'},{'sourceAttID':'lastName','colID':'lastName','width':'150','title':'Nachname'},{'sourceAttID':'email','colID':'email','width':'239','title':'E-Mail'}]" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true"></div>
+		<div id="{id}dataGrid2" data-type="dataGrid" data-selection-mode="single" data-readOnly="true" data-lib="WAF" data-label-position="top" data-label="" data-header-hide="false" data-footer-text="item(s)" data-draggable="false" data-display-error="false" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true" data-column="[{'sourceAttID':'userName','colID':'userName','width':'150','title':'Benutzername'},{'sourceAttID':'firstName','colID':'firstName','width':'150','title':'Vorname'},{'sourceAttID':'lastName','colID':'lastName','width':'150','title':'Nachname'},{'sourceAttID':'email','colID':'email','width':'239','title':'E-Mail'}]" data-binding="{id}user" class="waf-widget waf-dataGrid"></div>
 	</div>
+	
+	
+	
+	
+	
+	
+	
 	</section>
