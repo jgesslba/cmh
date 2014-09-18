@@ -165,7 +165,6 @@
 					"name" : "iso",
 					"kind" : "storage",
 					"scope" : "public",
-					"indexed" : true,
 					"unique" : true,
 					"not_null" : true,
 					"type" : "string",
@@ -173,7 +172,7 @@
 					[
 						{
 							"kind" : "onSet",
-							"from" : "$mainModel.Country.iso.events.onSet",
+							"from" : "model.Country.iso.events.onSet",
 							"userDefined" : true
 						}
 					]
@@ -235,7 +234,7 @@
 					[
 						{
 							"kind" : "onSet",
-							"from" : "$mainModel.Game.period.events.onSet",
+							"from" : "model.Game.period.events.onSet",
 							"userDefined" : true
 						}
 					]
@@ -334,7 +333,7 @@
 					"onGet" : 
 					[
 						{
-							"from" : "$mainModel.Game.gameInfo.onGet",
+							"from" : "model.Game.gameInfo.onGet",
 							"userDefined" : true
 						}
 					]
@@ -344,12 +343,12 @@
 			[
 				{
 					"kind" : "onSave",
-					"from" : "$mainModel.Game.events.onSave",
+					"from" : "model.Game.events.onSave",
 					"userDefined" : true
 				},
 				{
 					"kind" : "onRestrictingQuery",
-					"from" : "$mainModel.Game.events.onRestrictingQuery",
+					"from" : "model.Game.events.onRestrictingQuery",
 					"userDefined" : true
 				}
 			],
@@ -482,7 +481,7 @@
 			[
 				{
 					"kind" : "onValidate",
-					"from" : "$mainModel.Gamer.events.onValidate",
+					"from" : "model.Gamer.events.onValidate",
 					"userDefined" : true
 				}
 			],
@@ -492,7 +491,7 @@
 					"name" : "getTopMenuArray",
 					"applyTo" : "entity",
 					"scope" : "public",
-					"from" : "$mainModel.Gamer.entityMethods.getTopMenuArray",
+					"from" : "model.Gamer.entityMethods.getTopMenuArray",
 					"userDefined" : true
 				}
 			],
@@ -544,7 +543,7 @@
 					"onGet" : 
 					[
 						{
-							"from" : "$mainModel.User.fullName.onGet",
+							"from" : "model.User.fullName.onGet",
 							"userDefined" : true
 						}
 					]
@@ -565,7 +564,7 @@
 					[
 						{
 							"kind" : "onRemove",
-							"from" : "$mainModel.User.photo.events.onRemove",
+							"from" : "model.User.photo.events.onRemove",
 							"userDefined" : true
 						}
 					]
@@ -574,7 +573,6 @@
 					"name" : "userName",
 					"kind" : "storage",
 					"scope" : "public",
-					"indexed" : true,
 					"unique" : true,
 					"not_null" : true,
 					"type" : "string",
@@ -591,7 +589,6 @@
 					"name" : "email",
 					"kind" : "storage",
 					"scope" : "public",
-					"indexed" : true,
 					"unique" : true,
 					"not_null" : true,
 					"type" : "string",
@@ -652,12 +649,12 @@
 			[
 				{
 					"kind" : "onSave",
-					"from" : "$mainModel.User.events.onSave",
+					"from" : "model.User.events.onSave",
 					"userDefined" : true
 				},
 				{
 					"kind" : "onRestrictingQuery",
-					"from" : "$mainModel.User.events.onRestrictingQuery",
+					"from" : "model.User.events.onRestrictingQuery",
 					"userDefined" : true
 				}
 			],
@@ -667,14 +664,14 @@
 					"name" : "changePassword",
 					"applyTo" : "entity",
 					"scope" : "publicOnServer",
-					"from" : "$mainModel.User.entityMethods.changePassword",
+					"from" : "model.User.entityMethods.changePassword",
 					"userDefined" : true
 				},
 				{
 					"name" : "generateRandomPassword",
 					"applyTo" : "entity",
 					"scope" : "publicOnServer",
-					"from" : "$mainModel.User.entityMethods.generateRandomPassword",
+					"from" : "model.User.entityMethods.generateRandomPassword",
 					"userDefined" : true
 				}
 			],

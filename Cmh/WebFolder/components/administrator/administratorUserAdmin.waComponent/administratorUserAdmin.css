@@ -3,6 +3,36 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#{id}dataGrid1 {
+	 z-index: 11;
+	 width: 300px;
+	 height: 300px;
+	 top: 0px;
+	 left: 0px;
+	
+	 
+}
+
+#{id}ygddfdiv {
+	 z-index: 999;
+	 width: 240px;
+	 height: 35px;
+	 top: 643px;
+	 left: 64px;
+	 position: absolute;
+	 
+}
+
+#{id}studio-over-feedback {
+	 z-index: 0;
+	 width: 700px;
+	 height: 283px;
+	 top: 69px;
+	 left: 0px;
+	 position: absolute;
+	 
+}
+
 #{id}label11 {
 	 z-index: 26;
 	 width: 59px;
@@ -180,19 +210,8 @@
 	 
 }
 
-#{id}dataGrid2 {
-	 z-index: 1;
-	 top: 40px;
-	 bottom: 554px;
-	 left: 0px;
-	 right: 2px;
-	
-	 position: absolute;
-	 
-}
-
 #{id}containerSpace {
-	 z-index: 11;
+	 z-index: 10;
 	 width: 702px;
 	 height: 877px;
 	 top: 29px;
@@ -374,6 +393,17 @@
 	 background-image:-ms-linear-gradient(top, rgba(255, 255, 255, 0) 1%,rgba(255, 255, 255, 0) 100%);
 	 background-image:-o-linear-gradient(top, rgba(255, 255, 255, 0) 1%,rgba(255, 255, 255, 0) 100%);
 	 background-image:linear-gradient(top, rgba(255, 255, 255, 0) 1%,rgba(255, 255, 255, 0) 100%);
+	 
+}
+
+#{id}dataGrid2 {
+	 z-index: 1;
+	 top: 40px;
+	 bottom: 554px;
+	 left: 0px;
+	 right: 2px;
+	
+	 position: absolute;
 	 
 }
 
