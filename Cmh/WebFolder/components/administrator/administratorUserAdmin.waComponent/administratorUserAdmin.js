@@ -21,6 +21,9 @@ function constructor (id) {
 	fileUploadPassPhoto.filesUploaded = function fileUploadPassPhoto_filesUploaded (event)// @startlock
 	{// @endlock
 		// Add your code here
+		//$comp.sources.user.serverRefresh();
+		//var currentPerson = $comp.sources.user.getCurrentElement();
+		//console.log(currentPerson.photo);
 	};// @lock
 
 	// @region eventManager// @startlock
