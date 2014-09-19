@@ -14,17 +14,6 @@
 	 
 }
 
-#{id}radioGroup5 {
-	 z-index: 32;
-	 width: 200px;
-	 height: 25px;
-	 top: 214px;
-	 left: 229px;
-	
-	 position: absolute;
-	 
-}
-
 #{id}ygddfdiv {
 	 z-index: 999;
 	 width: 240px;
@@ -412,6 +401,17 @@
 	 background-image:-ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 100%);
 	 background-image:-o-linear-gradient(left, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 100%);
 	 background-image:linear-gradient(left, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 100%);
+	 
+}
+
+#{id}radioGroupGender {
+	 z-index: 32;
+	 width: 200px;
+	 height: 25px;
+	 top: 214px;
+	 left: 229px;
+	
+	 position: absolute;
 	 
 }
 
