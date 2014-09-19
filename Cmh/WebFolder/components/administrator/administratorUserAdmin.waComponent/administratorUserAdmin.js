@@ -13,22 +13,11 @@ function constructor (id) {
 	this.load = function (data) {// @lock
 
 	// @region namespaceDeclaration// @startlock
-	var fileUploadPassPhoto = {};	// @fileUpload
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
 
-	fileUploadPassPhoto.filesUploaded = function fileUploadPassPhoto_filesUploaded (event)// @startlock
-	{// @endlock
-		// Add your code here
-		//$comp.sources.user.serverRefresh();
-		//var currentPerson = $comp.sources.user.getCurrentElement();
-		//console.log(currentPerson.photo);
-		$comp.sources.user.collectionRefresh();
-	};// @lock
-
 	// @region eventManager// @startlock
-	WAF.addListener(this.id + "_fileUploadPassPhoto", "filesUploaded", fileUploadPassPhoto.filesUploaded, "WAF");
 	// @endregion// @endlock
 
 	};// @lock
