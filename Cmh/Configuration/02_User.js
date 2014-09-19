@@ -13,7 +13,7 @@ require('Serverside/Helper/security').includeCryptoJSsha512();
 // ##### CREATE DEFAULT ADMIN USER #####
 
 var newUser = new ds.User();
-newUser.firstName = "Jörg";
+newUser.firstName = "JÃ¶rg";
 newUser.lastName = "Gameadmin";
 newUser.email = "joerg.gesslbauer@me.com";
 newUser.userName = "gameadmin";
@@ -31,7 +31,7 @@ newUser.save();
 // ##### CREATE DEFAULT GAMEHOST USER #####
 
 var newUser = new ds.User();
-newUser.firstName = "Jörg";
+newUser.firstName = "JÃ¶rg";
 newUser.lastName = "Gamehost";
 newUser.email = "joerg.gesslbauer@gmail.com";
 newUser.userName = "gamehost";
@@ -49,7 +49,7 @@ newUser.save();
 // ##### CREATE DEFAULT GAMEHOST USER #####
 
 var newUser = new ds.User();
-newUser.firstName = "Jörg";
+newUser.firstName = "JÃ¶rg";
 newUser.lastName = "Gamer";
 newUser.email = "joerg.gesslbauer@fhwn.ac.at";
 newUser.userName = "gamer";
