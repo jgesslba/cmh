@@ -218,8 +218,8 @@
 
 #richTextCurrentUser {
 	 z-index: 2;
-	 width: 61px;
-	 height: 15px;
+	 width: 65px;
+	 height: 13px;
 	 top: 13px;
 	 right: 121px;
 	
@@ -236,7 +236,7 @@
 #richTextLogout {
 	 z-index: 3;
 	 width: 56px;
-	 height: 15px;
+	 height: 13px;
 	 top: 13px;
 	 right: 57px;
 	
