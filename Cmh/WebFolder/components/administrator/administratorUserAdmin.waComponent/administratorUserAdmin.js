@@ -24,6 +24,7 @@ function constructor (id) {
 		//$comp.sources.user.serverRefresh();
 		//var currentPerson = $comp.sources.user.getCurrentElement();
 		//console.log(currentPerson.photo);
+		$comp.sources.user.collectionRefresh();
 	};// @lock
 
 	// @region eventManager// @startlock
