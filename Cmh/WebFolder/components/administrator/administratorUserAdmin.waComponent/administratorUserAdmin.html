@@ -1,7 +1,8 @@
-﻿<!DOCTYPE html><section data-group="[['fileUploadPassPhoto']]" class=".fileUploadPassPhoto">
+﻿<!DOCTYPE html><section data-group="[['fileUploadPassPhoto'],['fileUpload1','button1','button2','button3','button4','container2']]" class=".fileUploadPassPhoto">
     <meta name="generator" content="Wakanda GUIDesigner"/>
     <meta name="WAF.catalog" content="User"/>
     <meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="User" data-scope="local" data-lib="WAF" data-id="{id}user" data-dataType="string" data-autoLoad="true" content="user"/>
+    
     
     <div id="{id}containerSpace" data-type="container" data-lib="WAF" data-label-position="top" data-label="" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-container waf-container-level-0 waf-level-0">
 	 	 	<div id="{id}richTextTitle" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-autoWidth="false" class="waf-widget waf-richText">Benutzerliste</div>
@@ -26,13 +27,28 @@
  	 	 		<button id="{id}buttonDelete" data-type="button" data-text="Löschen" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="{id}user" data-action="remove" class="waf-widget waf-button"></button>
  	 	 		<ul id="{id}radioGroup1" data-type="radioGroup" data-lib="WAF" data-label-position="left" data-label="Geschlecht" data-display="horizontal" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding-out="{id}{id}user.gender" data-autoDispatch="true" class="waf-widget waf-radioGroup"><li><input type="radio" value="m" name="radioGroup1" id="{id}radioGroup1-0"/><label for="{id}radioGroup1-0">Männlich</label></li><li><input type="radio" value="w" name="radioGroup1" id="{id}radioGroup1-1"/><label for="{id}radioGroup1-1">Weiblich</label></li></ul>
  	 	 			<label id="{id}label11" for="{id}radioGroup1" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-label waf-label-radiogroup">Geschlecht</label>
- 	 	 								<div id="{id}fileUploadPassPhoto" data-userAction="Ask the user" data-type="fileUpload" data-text=" " data-notification="true" data-maxfilesize-unity="KB" data-maxfilesize="-1" data-maxfiles="-1" data-listStyle="menu" data-linked-tag="{id}button1,{id}button2,{id}button3,{id}button4,{id}container2" data-lib="WAF" data-label-position="left" data-label="" data-folder="tmp" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="{id}user.photo" data-autoUpload="true" data-action="true" class="waf-widget waf-fileUpload fileUploadPassPhoto waf-role-smUploaded">
+ 	 	 								<div id="{id}fileUploadPassPhoto" data-userAction="Ask the user" data-type="fileUpload" data-text=" " data-notification="true" data-maxfilesize-unity="KB" data-maxfilesize="-1" data-maxfiles="-1" data-listStyle="menu" data-linked-tag="{id}button1,{id}button2,{id}button3,{id}button4,{id}container2" data-lib="WAF" data-label-position="left" data-label="" data-folder="tmp" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="{id}user.photo" data-autoUpload="false" data-action="true" class="waf-widget waf-fileUpload fileUploadPassPhoto waf-role-smUploaded">
  	 	 	</div>
- 	 		</div>
+ 	 			<div id="{id}fileUpload1" data-type="fileUpload" data-lib="WAF" data-label="Label" data-label-position="left" data-action="true" data-text="Drag your file(s) here" data-maxfilesize="-1" data-maxfilesize-unity="KB" data-maxfiles="-1" data-folder="tmp" data-autoUpload="false" data-userAction="Ask the user" data-notification="true" data-listStyle="menu" class="waf-widget waf-fileUpload" data-constraint-left="true" data-constraint-top="true" data-constraint-bottom="false" data-constraint-right="false" data-linked-tag="{id}button1,{id}button2,{id}button3,{id}button4,{id}container2" data-binding="{id}user.photo">
+	 	 	 	<button id="{id}button1" data-type="button" data-lib="WAF" class="waf-widget waf-button waf-fileUpload-btnBrowse" data-action="simple" data-target="_blank" data-context="['protected']" data-constraint-left="false" data-constraint-top="true" data-constraint-bottom="false" data-constraint-right="true" data-text="..."></button>
+ 	 	 		<button id="{id}button2" data-type="button" data-lib="WAF" class="waf-widget waf-button waf-fileUpload-btnUpload" data-action="simple" data-target="_blank" data-context="['protected']" data-constraint-left="false" data-constraint-top="true" data-constraint-bottom="false" data-constraint-right="true" data-text=" "></button>
+ 	 	 		<button id="{id}button3" data-type="button" data-lib="WAF" class="waf-widget waf-button waf-fileUpload-btnCardinal" data-action="simple" data-target="_blank" data-context="['protected']" data-constraint-left="false" data-constraint-top="true" data-constraint-bottom="false" data-constraint-right="true" data-text="n"></button>
+ 	 	 		<button id="{id}button4" data-type="button" data-lib="WAF" class="waf-widget waf-button waf-fileUpload-btnDelete" data-action="simple" data-target="_blank" data-context="['protected']" data-constraint-left="false" data-constraint-top="true" data-constraint-bottom="false" data-constraint-right="true" data-text="x"></button>
+ 	 	 		<div id="{id}container2" data-type="container" data-lib="WAF" class="waf-widget waf-container waf-container-level-2 waf-level-2 waf-fileUpload-fileList waf-fileUpload-fileList-menu" data-label="" data-label-position="top" data-context="['protected']" data-constraint-left="true" data-constraint-top="true" data-constraint-bottom="false" data-constraint-right="false" data-linked-tag="{id}fileUpload1"></div>
+ 	 	 	</div>
+ 	 		<label id="{id}label2" data-type="label" data-lib="WAF" for="{id}fileUpload1" data-valign="middle" data-margin="5" class="waf-widget waf-label waf-label-fileupload" data-constraint-left="true" data-constraint-top="true" data-constraint-bottom="false" data-constraint-right="false">Label</label>
+ 	 	</div>
  	 			<button id="{id}buttonAdd" data-type="button" data-text="Neuen Benutzer anlegen" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="{id}user" data-action="create" class="waf-widget waf-button waf-role-smUploader"></button>
  	 			
 		<div id="{id}dataGrid2" data-type="dataGrid" data-selection-mode="single" data-readOnly="true" data-lib="WAF" data-label-position="top" data-label="" data-header-hide="false" data-footer-text="item(s)" data-draggable="false" data-display-error="false" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true" data-column="[{'sourceAttID':'userName','colID':'userName','width':'150','title':'Benutzername'},{'sourceAttID':'firstName','colID':'firstName','width':'150','title':'Vorname'},{'sourceAttID':'lastName','colID':'lastName','width':'150','title':'Nachname'},{'sourceAttID':'email','colID':'email','width':'239','title':'E-Mail'}]" data-binding="{id}user" class="waf-widget waf-dataGrid"></div>
 	</div>
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
