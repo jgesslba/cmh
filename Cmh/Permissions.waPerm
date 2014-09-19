@@ -8,11 +8,4 @@
 	<allow action="describe" groupName="User_Describe" groupID="E89066770B314ECA89A94C3F764DA987" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
 	<allow action="execute" groupName="User_Execute" groupID="C0733479DC68412BA11E5414EABE4D4A" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
 	<allow action="promote" groupName="User_Promote" groupID="828617CB5F55464797BC2F2E2346A022" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
-	<allow action="read" groupName="Model_Read" groupID="926EA4BA6A15463E8FE5CA17F846421C" resource="Model" temporaryForcePermissions="false" type="model"/>
-	<allow action="create" groupName="Model_Create" groupID="95BA68BD9BC84FB083E93698767DF4F8" resource="Model" temporaryForcePermissions="false" type="model"/>
-	<allow action="update" groupName="Model_Update" groupID="BF56AFF2F25A44C7A70AFFE153907D34" resource="Model" temporaryForcePermissions="false" type="model"/>
-	<allow action="remove" groupName="Model_Remove" groupID="139837B23B2546108D2CFEBA2BCFC8C7" resource="Model" temporaryForcePermissions="false" type="model"/>
-	<allow action="describe" groupName="Model_Describe" groupID="BACE1C0B7B8641BEBB6074B7E47A30ED" resource="Model" temporaryForcePermissions="false" type="model"/>
-	<allow action="execute" groupName="Model_Execute" groupID="16BA448D7D294F98966319B155CC5431" resource="Model" temporaryForcePermissions="false" type="model"/>
-	<allow action="promote" groupName="Model_Promote" groupID="25599E220CC54DAFA1320D719BFD371A" resource="Model" temporaryForcePermissions="false" type="model"/>
 </permissions>

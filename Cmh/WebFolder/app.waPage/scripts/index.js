@@ -131,12 +131,19 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	
 	// Resize function to show scrollbars
 	function windowResizeOverflow () {
-		var minW = 990;
+		var minW = 1120;
+		var minH = 800;
 		// If the window width is smaller than the minimal width set the window width to the fixed minimal width - scrollbars appear
 		if ($(window).width() < minW) {
-			$("#containerCenter").css("width", minW + "px");
+			$("#containerFullPage").css("width", minW + "px");
 		} else {
-			$("#containerCenter").css("width", "");
+			$("#containerFullPage").css("width", "");
+		}
+	
+		if ($(window).height() < minH) {
+			$("#containerFullPage").css("height", minH + "px");
+		} else {
+			$("#containerFullPage").css("height", "");
 		}
 	};
 	
