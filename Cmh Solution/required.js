@@ -17,11 +17,12 @@ function Login(userName, password, passwordIsKey) {
 		if (theProjectUser != null) { // theProjectUser exists in the project user store 
 			// See if the stored hash value is correct
 			var hashValue = '';
-			if (passwordIsKey) { // The passwordIsKey is true and therefore a passwordIsKey should be used				
+			if (passwordIsKey) { // The passwordIsKey is true and therefore a passwordIsKey should be used			
 				hashValue = CryptoJS.SHA512(theProjectUser.ID + password).toString();
 				
 			} else { // The passwordIsKey is false and therefore no passwordIsKey should be used. The HA1 hash of the directory for userName and password is used.
-				hashValue = directory.computeHA1(userName, password);
+				// hashValue = directory.computeHA1(userName, password);
+				hashValue = password;
 			}
 					
 			if (theProjectUser.password === hashValue) {
