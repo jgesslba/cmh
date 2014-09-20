@@ -8,4 +8,5 @@
 	<allow action="describe" groupName="User_Describe" groupID="E89066770B314ECA89A94C3F764DA987" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
 	<allow action="execute" groupName="User_Execute" groupID="C0733479DC68412BA11E5414EABE4D4A" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
 	<allow action="promote" groupName="User_Promote" groupID="828617CB5F55464797BC2F2E2346A022" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="upload" groupName="Admin" groupID="01000000000000000000000000000000" resource="upload" temporaryForcePermissions="false" type="service"/>
 </permissions>
