@@ -169,11 +169,12 @@
 					"unique" : true,
 					"not_null" : true,
 					"type" : "string",
+					"indexKind" : "btree",
 					"events" : 
 					[
 						{
 							"kind" : "onSet",
-							"from" : "model.Country.iso.events.onSet",
+							"from" : "$mainModel.Country.iso.events.onSet",
 							"userDefined" : true
 						}
 					]
@@ -235,7 +236,7 @@
 					[
 						{
 							"kind" : "onSet",
-							"from" : "model.Game.period.events.onSet",
+							"from" : "$mainModel.Game.period.events.onSet",
 							"userDefined" : true
 						}
 					]
@@ -334,7 +335,7 @@
 					"onGet" : 
 					[
 						{
-							"from" : "model.Game.gameInfo.onGet",
+							"from" : "$mainModel.Game.gameInfo.onGet",
 							"userDefined" : true
 						}
 					]
@@ -344,12 +345,12 @@
 			[
 				{
 					"kind" : "onSave",
-					"from" : "model.Game.events.onSave",
+					"from" : "$mainModel.Game.events.onSave",
 					"userDefined" : true
 				},
 				{
 					"kind" : "onRestrictingQuery",
-					"from" : "model.Game.events.onRestrictingQuery",
+					"from" : "$mainModel.Game.events.onRestrictingQuery",
 					"userDefined" : true
 				}
 			],
@@ -482,7 +483,7 @@
 			[
 				{
 					"kind" : "onValidate",
-					"from" : "model.Gamer.events.onValidate",
+					"from" : "$mainModel.Gamer.events.onValidate",
 					"userDefined" : true
 				}
 			],
@@ -492,7 +493,7 @@
 					"name" : "getTopMenuArray",
 					"applyTo" : "entity",
 					"scope" : "public",
-					"from" : "model.Gamer.entityMethods.getTopMenuArray",
+					"from" : "$mainModel.Gamer.entityMethods.getTopMenuArray",
 					"userDefined" : true
 				}
 			],
@@ -544,7 +545,7 @@
 					"onGet" : 
 					[
 						{
-							"from" : "model.User.fullName.onGet",
+							"from" : "$mainModel.User.fullName.onGet",
 							"userDefined" : true
 						}
 					]
@@ -565,7 +566,7 @@
 					[
 						{
 							"kind" : "onRemove",
-							"from" : "model.User.photo.events.onRemove",
+							"from" : "$mainModel.User.photo.events.onRemove",
 							"userDefined" : true
 						}
 					]
@@ -578,6 +579,7 @@
 					"unique" : true,
 					"not_null" : true,
 					"type" : "string",
+					"indexKind" : "btree",
 					"identifying" : true
 				},
 				{
@@ -595,6 +597,7 @@
 					"unique" : true,
 					"not_null" : true,
 					"type" : "string",
+					"indexKind" : "btree",
 					"identifying" : true
 				},
 				{
@@ -658,12 +661,12 @@
 			[
 				{
 					"kind" : "onSave",
-					"from" : "model.User.events.onSave",
+					"from" : "$mainModel.User.events.onSave",
 					"userDefined" : true
 				},
 				{
 					"kind" : "onRestrictingQuery",
-					"from" : "model.User.events.onRestrictingQuery",
+					"from" : "$mainModel.User.events.onRestrictingQuery",
 					"userDefined" : true
 				}
 			],
@@ -673,14 +676,14 @@
 					"name" : "changePassword",
 					"applyTo" : "entity",
 					"scope" : "publicOnServer",
-					"from" : "model.User.entityMethods.changePassword",
+					"from" : "$mainModel.User.entityMethods.changePassword",
 					"userDefined" : true
 				},
 				{
 					"name" : "generateRandomPassword",
 					"applyTo" : "entity",
 					"scope" : "publicOnServer",
-					"from" : "model.User.entityMethods.generateRandomPassword",
+					"from" : "$mainModel.User.entityMethods.generateRandomPassword",
 					"userDefined" : true
 				}
 			],

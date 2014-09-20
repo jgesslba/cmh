@@ -1,0 +1,170 @@
+.waf-gridview {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid rgb(153, 153, 153);
+	overflow:hidden
+}
+
+
+.vr-widget-grid {
+    margin: 0;
+    padding: 0;
+    text-decoration: inherit;
+    font-family: 'Droid Serif', serif;
+    font-size: 13px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid grey;
+    overflow:hidden
+}
+
+.vr-widget-grid-header {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: bold;
+	border-color: rgb(204, 204, 204);
+    overflow:hidden;
+    text-shadow: rgb(255, 255, 255) 1px 1px;
+	color: rgb(115, 115, 115);
+}
+
+
+.vr-widget-grid-footer {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    bottom: 0px;
+	box-shadow: inset 0 -1px 1px rgb(255, 255, 255);
+	 text-align: center;
+}
+
+
+.vr-widget-grid-body {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;   
+}
+
+
+.vr-widget-grid-body-nonStudio {
+	overflow: auto;
+}
+
+
+.vr-widget-grid-body-scroll {
+    position: relative;
+}
+
+
+.vr-widget-grid-row-alt{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    width : 500px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+
+}
+
+
+.vr-widget-grid-row-even{
+    background-color: rgb(247, 247, 247);
+    position: absolute;
+    width : 500px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+
+
+.vr-widget-grid-row-selected {
+    box-shadow: none;
+    background-color:LightSteelBlue;
+}
+
+
+
+.vr-widget-grid-row-cell {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    top:0px;
+    left:0px;
+    height:100%;
+    float:left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-right: 1px solid rgb(230, 230, 230);
+    background-color:inherit;
+}
+
+.vr-widget-grid-row-cell-header {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    top:0px;
+    left:0px;
+    height:100%;
+    float:left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-right: 1px solid rgb(204, 204, 204);
+	text-shadow: inherit;
+	color: inherit;
+	background-color:inherit;
+}
+
+
+.vr-widget-grid-row-header{
+	background-color: rgb(240, 240, 240);
+	border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.vr-widget-grid-row-cell > .content {
+	position: relative;
+	left: 0;
+	width: 100%;
+	/* height: 100%; */
+	padding: 6px 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.vr-widget-grid-row-cell-header > .contentHeader {
+	position: relative;
+	left: 0;
+	width: 100%;
+	/* height: 100%; */
+	padding: 6px 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.vr-widget-grid-editCell {
+	-webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+	
+}
