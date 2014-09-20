@@ -646,6 +646,12 @@
 					"type" : "GamehostCollection",
 					"reversePath" : true,
 					"path" : "user"
+				},
+				{
+					"name" : "gender2",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				}
 			],
 			"events" : 
