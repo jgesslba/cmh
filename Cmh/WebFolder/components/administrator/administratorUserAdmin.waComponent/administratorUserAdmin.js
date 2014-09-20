@@ -1,4 +1,4 @@
-﻿
+
 (function Component (id) {// @lock
 
 // Add the code that needs to be shared between components here
