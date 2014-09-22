@@ -13,11 +13,20 @@ function constructor (id) {
 	this.load = function (data) {// @lock
 
 	// @region namespaceDeclaration// @startlock
+	var button1 = {};	// @button
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
 
+	button1.click = function button1_click (event)// @startlock
+	{// @endlock
+		if(fileSelector.files.length > 0) {
+			$$(getHtmlId("image2")).setValue(fileSelector.files[0]);
+		}
+	};// @lock
+
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
 	// @endregion// @endlock
 
 	};// @lock
